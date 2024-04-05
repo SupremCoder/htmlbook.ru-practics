@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Карты</title>
+  <style>
+    .cards::before {
+      margin-right: 10px;
+
+    }
+
+    .spade::before {
+      content: '\2660';
+    }
+
+    .club::before {
+      content: '\2663';
+    }
+
+    .diamond::before {
+      content: '\2666';
+      color: red;
+    }
+
+    .heart::before {
+      content: '\2665';
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="cards spade">8, 9</div>
+  <div class="cards club">8, 9</div>
+  <div class="cards diamond">7, 10, B</div>
+  <div class="cards heart">7, 8, 9</div>
+
+</body>
+
+</html>
