@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оптимизация CSS</title>
+  <style>
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      color: #3A681A;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #5CA22E;
+    }
+
+    a:active {
+      color: #DC0000;
+    }
+
+    .pole,
+    .pole2,
+    a:link {
+      font-size: 11px;
+    }
+
+    .pole,
+    .pole2 {
+      border: 1px solid #008000;
+      background-color: #E7F2D7;
+      height: 17px;
+    }
+
+    .pole {
+      width: 95px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Используя группирование и наследование оптимизируйте приведённый стиль. -->
+  <a href="#">https://www.google.com</a>
+  <div class="pole"></div>
+  <div class="pole2"></div>
+
+</body>
+
+</html>
