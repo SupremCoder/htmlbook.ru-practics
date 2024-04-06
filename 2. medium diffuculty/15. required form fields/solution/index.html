@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Обязательные поля формы</title>
+  <style>
+    input:valid+span:after {
+      content: url(images/ok.png);
+      padding-left: 5px;
+    }
+
+    input:invalid+span:after {
+      content: url(images/nook.png);
+      padding-left: 5px;
+    }
+
+    input[type="number"] {
+      margin-right: -3px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Сделайте форму, показанную на рис. 1, в которой поля обязательные к заполнению отмечены крестиком, а необязательные поля зеленой галочкой. При корректном заполнении обязательных полей должен меняться и рисунок возле поля. -->
+  <!-- Пример должен корректно работать в браузерах Firefox 6+, Safari 5, Chrome 8+ и Opera 11+. -->
+
+  <form action="handler.php">
+    <p>Пожалуйста, заполните обязательные поля.</p>
+    <p>Имя: <input type="text" required><span></span></p>
+    <p>Возраст: <input type="number" size="3"><span></span></p>
+    <p>E-mail: <input type="email" required><span></span></p>
+    <p>Сайт: <input type="url"><span></span></p>
+    <p><input type="submit" value="Отправить"></p>
+  </form>
+
+</body>
+
+</html>
