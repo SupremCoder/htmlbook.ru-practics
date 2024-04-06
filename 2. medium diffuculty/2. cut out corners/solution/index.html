@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .block {
+      background-color: #008000;
+      width: 200px;
+      height: 50px;
+      margin: 50px;
+      color: #fff;
+      text-align: left;
+      line-height: 50px;
+      padding-left: 15px;
+      position: relative;
+    }
+
+    .block:after,
+    .block:before {
+      position: absolute;
+      content: '';
+      height: 44px;
+      width: 3px;
+      top: 3px;
+      background-color: #008000;
+    }
+
+    .block:after {
+      right: -3px;
+    }
+
+    .block:before {
+      left: -3px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- по теме
+    ::after и ::before
+    Псевдоэлементы -->
+
+  <!-- Добавьте к блоку небольшие квадратные вырезы по углам, как это показано на рисунке ниже. Код должен корректно работать в IE8+ и современных браузерах. -->
+
+  <div class="block">Содержимое</div>
+
+</body>
+
+</html>
