@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Граница вокруг формы</title>
+  <style>
+    fieldset {
+      background-color: #E1E3B8;
+      position: relative;
+      border: #5B7954 solid 1px;
+      padding: 1em;
+      width: 500px;
+    }
+
+    fieldset::before {
+      content: "";
+      background-image: url("./checked.png");
+      background-size: 35%;
+      background-position: 10px top;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.09;
+    }
+
+    fieldset legend::before {
+      content: "Выбор варианта";
+      font-weight: 600;
+      color: #A35D43;
+    }
+
+    .question {
+      font-weight: bold;
+      font-family: serif;
+    }
+
+    input {
+      display: block;
+      margin: 1em 0 2em 150px;
+    }
+
+    input::after {
+      content: attr(value);
+      font-family: serif;
+      font-size: 14px;
+      position: absolute;
+      left: 185px;
+    }
+
+    .button {
+      display: block;
+      background-color: #B98F5C;
+      color: white;
+      border: 1px solid white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Создайте форму на HTML5, показанную на рис. 1. -->
+  <!-- Форма должна одинаково отображаться в браузерах IE8+, Opera 11+, Chrome 8+, Firefox 6+. -->
+
+  <form action="">
+    <fieldset>
+      <legend></legend>
+      <span class="question">
+        Какой раздел человеческой психологии изучает познавательные процессы человеческого сознания?
+      </span>
+      <input type="radio" name="question" value="Психоанализ">
+      <input type="radio" name="question" value="Бихевиоризм">
+      <input type="radio" name="question" value="Когнитивная психология">
+      <input type="radio" name="question" value="Гуманистическая психология">
+      <input type="radio" name="question" value="Гештальт-психология">
+      <input class="button" type="submit" value="Ответить">
+    </fieldset>
+  </form>
+
+
+</body>
+
+</html>
