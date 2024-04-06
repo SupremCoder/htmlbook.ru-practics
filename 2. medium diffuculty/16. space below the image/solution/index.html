@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Отступ под изображением</title>
+      <style>
+            body {
+                  background: #333;
+            }
+
+            div {
+                  position: absolute;
+                  left: 200px;
+                  top: 50px;
+                  border: 2px solid #28a028;
+                  background: #fff;
+
+                  /* 
+	Способ 1: 
+	font-size: 0;
+	*/
+
+                  /* 	
+	Способ 2: 
+	line-height: 0;
+	*/
+            }
+
+            img {
+                  width: 350px;
+                  height: 200px;
+
+                  /* 
+	Способ 3: 
+	display: block;
+	*/
+
+                  /* 
+	Способ 4: 
+	margin-bottom: -4px
+	*/
+
+                  /* 
+	Способ 5: 
+	vertical-align: top;
+	*/
+
+                  /* 
+	Способ 6: 
+	vertical-align: middle;
+	*/
+
+                  /* 
+	Способ 7: 
+	vertical-align: bottom;
+	*/
+
+                  /* 
+	Способ 8: 
+	float: left;
+	*/
+            }
+      </style>
+</head>
+
+<body>
+
+      <!-- Миша вставил на страницу фотографию совы в рамке (рис. 1), но в браузере под фотографией отображается небольшой отступ. Подскажите Мише пять способов, как его убрать. -->
+
+      <div><img src="./owl.jpg" alt=""></div>
+
+</body>
+
+</html>
