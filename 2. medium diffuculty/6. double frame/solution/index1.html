@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Двойная рамка</title>
+  <style>
+    body {
+      background: rgb(253, 253, 167);
+    }
+
+    .block {
+      position: relative;
+      background-color: #fff;
+      line-height: 50px;
+      color: #000;
+      height: 50px;
+      width: 300px;
+      padding: 0 20px;
+      border: 6px solid #EB7223;
+    }
+
+    .block__border {
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      height: calc(100% + 3px);
+      width: calc(100% + 3px);
+      outline: 3px solid #E9B700;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Сделайте рамку вокруг блока, как показано на рис. 1. Рамка должна корректно отображаться во всех современных браузерах. -->
+
+  <div class="wrapper">
+    <div class="block"> Capitania do Duquio daueiro
+      <div class="block__border"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>
