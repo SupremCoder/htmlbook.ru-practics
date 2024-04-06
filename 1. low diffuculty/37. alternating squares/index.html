@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Чередующиеся квадраты</title>
+  <style>
+    .box div {
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+    }
+
+    .box div:nth-child(odd) {
+      background: black;
+    }
+
+    .box div:nth-child(even) {
+      background: rgb(99, 99, 255);
+    }
+
+    .box div:hover {
+      background: orange;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Сделайте набор квадратов, у которых меняется цвет заливки (рис. 1). При наведении на любой квадрат его цвет меняется на оранжевый (рис. 2). -->
+
+  <div class="boxes">
+    <div class="box">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="box">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
