@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Градиентные кнопки в Safari</title>
+  <style>
+    button {
+      padding: 3px 7px;
+      /* Поля вокруг текста */
+      color: #333;
+      /* Цвет текста */
+      -moz-border-radius: 5px;
+      /* Радиус для Firefox */
+      -webkit-border-radius: 5px;
+      /* Радиус для Safari и Chrome */
+      border-radius: 5px;
+      /* Радиус для IE 9 */
+      border: 1px solid #666;
+      /* Параметры рамки */
+    }
+
+    button.t1 {
+      background: -moz-linear-gradient(#00bbd6, #ebffff);
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(#00BBD6), to(#EBFFFF));
+    }
+
+    button.t2 {
+      background: -moz-linear-gradient(#4af264, #39ba4d, #4af264);
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(#4af264), to(#4af264), color-stop(0.5, #39ba4d));
+    }
+
+    button.t3 {
+      background: -moz-linear-gradient(#e0f0f4, #56d1ed, #00bee8, #00bbd6);
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(#e0f0f4), to(#00bbd6), color-stop(0.72, #00bee8));
+      color: #ffe;
+    }
+
+    button.t4 {
+      background: -moz-linear-gradient(#f2f2f2, #777, #404040, #252525);
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(#f2f2f2), to(#252525), color-stop(0.6, #777), color-stop(0.6, #404040));
+      color: #fff;
+      border: 2px solid #666;
+    }
+
+    button.t5 {
+      background: -moz-linear-gradient(#e6e7e8, #e9e9ea, #bec0c2);
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(#e6e7e8), to(#bec0c2), color-stop(0.5, #e9e9ea));
+      border: 2px inset #f0f0f0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Напишите для браузеров Firefox, Safari и Chrome стиль, реализующий кнопки, представленные на рис. 1. Запрещено использовать любые изображения. Допустимо, что результат может немного различаться в браузерах. -->
+
+  <form action="">
+    <p>
+      <button class="t1">Простой градиент</button>
+      <button class="t2">Выпуклая кнопка</button>
+      <button class="t3">Другая выпуклая кнопка</button>
+      <button class="t4">Кнопка в стиле Веб 2.0</button>
+      <button class="t5">Вдавленная кнопка</button>
+    </p>
+  </form>
+
+</body>
+
+</html>
