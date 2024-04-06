@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Батарейка</title>
+  <style>
+    .battery_box {
+      display: flex;
+      align-items: center;
+    }
+
+    .battery_box div {
+      width: 150px;
+      height: 50px;
+      border: 4px solid black;
+      margin: 10px 0;
+    }
+
+    .battery_box>span {
+      width: 8px;
+      height: 20px;
+      background: #000;
+    }
+
+    .r span,
+    .y span,
+    .g span {
+      display: inline-block;
+      height: 100%;
+    }
+
+    .r span {
+      width: 35%;
+      background: red;
+    }
+
+    .y span {
+      width: 65%;
+      background: rgb(255, 217, 0);
+    }
+
+    .g {
+      background: rgb(57, 172, 57);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Сделайте страницу, как показано на рис. 1. Размеры всех частей заданы в пикселах и не меняются в процессе масштабирования окна. Для каждой батарейки постарайтесь обойтись одним элементом.
+  -->
+
+
+  <div class="battery_box">
+    <div class="r">
+      <span></span>
+    </div>
+    <span></span>
+  </div>
+  <div class="battery_box">
+    <div class="y">
+      <span></span>
+    </div>
+    <span></span>
+  </div>
+  <div class="battery_box">
+    <div class="g"></div>
+    <span></span>
+  </div>
+
+
+
+</body>
+
+</html>
