@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Цвет и фон в таблице</title>
+  <style>
+    body {
+      font-size: 1.5em;
+      /* Размер текста */
+    }
+
+    table {
+      width: 100%;
+      /* Ширина таблицы */
+    }
+
+    td {
+      padding: 5px;
+    }
+
+    td.col1 {
+      background: red;
+      color: white;
+    }
+
+    td.col2 {
+      background: orange;
+      color: gray;
+    }
+
+    td.col3 {
+      background: yellow;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Создайте таблицу, показанную на рис. 1, задав цвета через стили. Ширина таблицы составляет 100%. -->
+
+  <table cellspacing="0">
+    <tr>
+      <td class="col1">Шаг 1</td>
+      <td class="col2">Шаг 2</td>
+      <td class="col3">Шаг 3</td>
+    </tr>
+  </table>
+
+</body>
+
+</html>
