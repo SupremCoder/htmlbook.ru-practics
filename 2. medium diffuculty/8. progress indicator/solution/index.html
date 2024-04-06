@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Индикатор прогресса</title>
+  <style>
+    .progress {
+      background: -moz-linear-gradient(top, #333, #999);
+      /* Fx 3.6+ */
+      background: -webkit-linear-gradient(top, #333, #999);
+      /* Chrome 10+,Safari 5.1+ */
+      background: -o-linear-gradient(top, #333, #999);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, #333, #999);
+      /* IE10+ */
+      background: linear-gradient(to bottom, #333, #999);
+      /* W3C */
+      border: 1px solid #333;
+      /* Рамка */
+      height: 20px;
+      /* Высота */
+      border-radius: 10px;
+      /* Радиус скругления */
+      position: relative;
+      /* Относительное позиционирование */
+      overflow: hidden;
+      /* Прячем ненужную тень */
+    }
+
+    .progress::before {
+      content: '';
+      position: absolute;
+      /* Абсолютное позиционирование */
+      height: 18px;
+      width: 100px;
+      background: #5bc1fe;
+      /* Для старых браузеров */
+      background: -moz-linear-gradient(top, #5bc1fe, #018ef2 50%, #57befd);
+      /* Fx 3.6+ */
+      background: -webkit-linear-gradient(top, #5bc1fe, #018ef2 50%, #57befd);
+      /* Chrome 10+,Safari 5.1+ */
+      background: -o-linear-gradient(top, #5bc1fe, #018ef2 50%, #57befd);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, #5bc1fe, #018ef2 50%, #57befd);
+      /* IE10+ */
+      background: linear-gradient(to bottom, #5bc1fe, #018ef2 50%, #57befd);
+      /* W3C */
+      border: 1px solid #008DF2;
+      /* Рамка */
+      box-shadow: 3px 0 3px rgba(0, 0, 0, 0.5);
+      /* Тень справа */
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Сделайте индикатор прогресса, как показано на рис. 1. Ширина самого элемента 100%, высота 20px. Значение индикатора должно легко задаваться через ширину, как в процентах, так и пикселах. -->
+  <!-- Для наглядности увеличенный фрагмент индикатора показан на рис. 2. Обратите внимание на градиенты, рамки и небольшую тень справа. -->
+
+  <div class="progress"></div>
+
+</body>
+
+</html>
