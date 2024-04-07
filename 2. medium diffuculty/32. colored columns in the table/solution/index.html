@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Цветные колонки в таблице</title>
+  <style>
+    .jewel {
+      width: 100%;
+      /* Ширина таблицы */
+      border: 1px solid #000;
+      /* Рамка вокруг таблицы */
+      border-collapse: collapse;
+    }
+
+    .jewel th {
+      background: #666;
+      color: #fff;
+    }
+
+    .jewel td,
+    .jewel th {
+      padding: 3px;
+      /* Поля вокруг текста */
+      text-align: left;
+      /* Выравнивание по левому краю */
+      border: 1px solid #000;
+    }
+
+    .jewel td:nth-child(odd) {
+      background: #7cded5;
+    }
+
+    .jewel td:nth-child(even) {
+      background: #fffd7a;
+    }
+
+    .jewel td:nth-child(3) {
+      text-align: center;
+      /* Выравнивание по центру */
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Создайте таблицу представленную на рис. 1. Должны соблюдаться следующие условия:
+валидный строгий XHTML-код;
+валидный CSS3;
+к тегам внутри таблицы запрещается добавлять идентификаторы и классы;
+содержимое третьей колонки выравнивается по центру. -->
+
+  <table class="jewel">
+    <tr>
+      <th>Название</th>
+      <th>Цвет</th>
+      <th>Твердость по Моосу</th>
+      <th>Формула</th>
+    </tr>
+    <tr>
+      <td>Алмаз</td>
+      <td>Белый</td>
+      <td>10</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td>Рубин</td>
+      <td>Красный</td>
+      <td>9</td>
+      <td>Al<sub>2</sub>O<sub>3</sub></td>
+    </tr>
+    <tr>
+      <td>Аметист</td>
+      <td>Голубой</td>
+      <td>7</td>
+      <td>SiO<sub>2</sub></td>
+    </tr>
+    <tr>
+      <td>Изумруд</td>
+      <td>Зеленый</td>
+      <td>8</td>
+      <td>Be<sub>3</sub>Al<sub>2</sub>(SiO<sub>3</sub>)<sub>6</sub></td>
+    </tr>
+    <tr>
+      <td>Сапфир</td>
+      <td>Голубой</td>
+      <td>9</td>
+      <td>Al<sub>2</sub>O<sub>3</sub></td>
+    </tr>
+  </table>
+
+</body>
+
+</html>
