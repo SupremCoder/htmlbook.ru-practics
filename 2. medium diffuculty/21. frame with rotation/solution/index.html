@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рамка с поворотом</title>
+  <style>
+    .frame {
+      position: relative;
+      /* Относительное позиционирование */
+      display: inline-block;
+      /* Ширина блока равна ширине картинки */
+      margin: 10px;
+      /* Задаём пространство вокруг блока */
+      padding: 4px;
+      /* Толщина внутренней рамки */
+      outline: 1px solid #fff;
+      /* Белая рамка вокруг блока */
+    }
+
+    .frame img {
+      display: block;
+      /* Убираем отступ под картинкой */
+    }
+
+    .frame::after {
+      content: '';
+      position: absolute;
+      /* Абсолютное позиционирование */
+      left: -2px;
+      top: -2px;
+      /* Сдвигаем влево и вверх */
+      width: 100%;
+      height: 100%;
+      /* Ширина и высота совпадает с родителем */
+      z-index: -1;
+      /* Ставим под картинку */
+      transform: rotate(-6deg);
+      /* Поворачиваем рамку */
+    }
+
+    .frame,
+    .frame::after {
+      background: #dad6cf;
+      /* Цвет фона */
+      border: 2px solid #c2b59d;
+      /* Параметры рамки */
+    }
+
+    img {
+      object-fit: cover;
+      width: 200px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Сделайте страницу, как показано на рис. 1. Рамка должна корректно отображаться во всех современных браузерах. -->
+
+  <div class="frame"><img src="./back.jpg" alt=""></div>
+
+</body>
+
+</html>
