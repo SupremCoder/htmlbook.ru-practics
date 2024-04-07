@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Прогноз погоды</title>
+  <style>
+    .weather__row {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+    }
+
+    .weather__day {
+      width: 150px;
+      font-size: 20px;
+      margin-right: 2px;
+    }
+
+    .weather__day:hover {
+      box-shadow: 0 0 5px 1px #000000;
+    }
+
+    .weather__image {
+      padding: 15px;
+      overflow: hidden;
+      height: 120px;
+    }
+
+    .weather__top {
+      background: #0097B9;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 2px;
+    }
+
+    .weather__bottom {
+      text-align: center;
+      font-size: 1.3em;
+    }
+
+    img {
+      object-fit: cover;
+      width: 260px;
+      height: 120px;
+    }
+
+    .sun {
+      object-position: left top;
+    }
+
+    .snow {
+      object-position: center bottom;
+    }
+
+    .blizzard {
+      object-position: -140px bottom;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Сверстайте показанный на рис. 1 макет. Ширина колонок фиксирована и не зависит от размеров окна браузера. -->
+  <!-- При наведении на любую колонку вокруг неё отображается тень (рис. 2). -->
+
+  <div class="weather">
+    <div class="weather__row">
+      <div class="weather__day">
+        <div class="weather__top">31.08</div>
+        <div class="weather__image"><img src="./weather.png" class="sun" alt=""></div>
+        <div class="weather__bottom">+20&deg;</div>
+      </div>
+      <div class="weather__day">
+        <div class="weather__top">01.09</div>
+        <div class="weather__image"><img src="./weather.png" class="snow" alt=""></div>
+        <div class="weather__bottom">-3&deg;</div>
+      </div>
+      <div class="weather__day">
+        <div class="weather__top">02.09</div>
+        <div class="weather__image"><img src="./weather.png" class="blizzard" alt=""></div>
+        <div class="weather__bottom">-10&deg;</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
