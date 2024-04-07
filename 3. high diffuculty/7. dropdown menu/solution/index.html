@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ниспадающее меню</title>
+  <style>
+    .wrapper {
+      margin: 40px;
+    }
+
+    .dropdown-menu {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+    }
+
+    .dropdown-menu__edit {
+      margin-left: 40px;
+    }
+
+    .dropdown-menu__file-title,
+    .dropdown-menu__edit-title {
+      display: inline-block;
+      margin: 0;
+      padding: 5px 5px 5px 5px;
+      color: #1005CC;
+      text-decoration: underline;
+      background: #FFFFFF;
+      margin-bottom: -2px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .dropdown-menu__file-menu,
+    .dropdown-menu__edit-menu {
+      padding: 5px;
+      box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.3);
+      background: #FFFFFF;
+      display: none;
+      position: absolute;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      margin: 0;
+      padding: 0 40px 0 2px;
+      color: #1005CC;
+    }
+
+    li:hover {
+      background: #37ABFF;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+
+    .dropdown-menu__file:hover>.dropdown-menu__file-menu,
+    .dropdown-menu__edit:hover>.dropdown-menu__edit-menu {
+      display: block;
+    }
+
+    .dropdown-menu__file:hover>.dropdown-menu__file-title,
+    .dropdown-menu__edit:hover>.dropdown-menu__edit-title {
+      text-decoration: none;
+      color: #000000;
+    }
+
+    .dropdown-menu__file:hover,
+    .dropdown-menu__edit:hover {
+      box-shadow:
+        0 -4px 4px -3px rgba(0, 0, 0, 0.3),
+        -7px 1.6px 4px -5px rgba(0, 0, 0, 0.3),
+        7px 0.5px 4px -5px rgba(0, 0, 0, 0.3);
+      z-index: 5;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom: 0;
+    }
+  </style>
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Сделайте ниспадающее меню, показанное на рисунках. -->
+  <!-- Меню должно корректно отображаться в основных современных браузерах. -->
+
+  <div class="wrapper">
+    <div class="dropdown-menu">
+      <div class="dropdown-menu__file">
+        <div class="dropdown-menu__file-title" id="por">Файл</div>
+        <div class="dropdown-menu__file-menu">
+          <ul>
+            <li>Новый</li>
+            <li>Открыть</li>
+            <li>Сохранить</li>
+            <li>Закрыть</li>
+          </ul>
+        </div>
+      </div>
+      <div class="dropdown-menu__edit">
+        <div class="dropdown-menu__edit-title">Правка</div>
+        <div class="dropdown-menu__edit-menu">
+          <ul>
+            <li>Вырезать</li>
+            <li>Копировать</li>
+            <li>Вставить</li>
+            <li>Удалить</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
