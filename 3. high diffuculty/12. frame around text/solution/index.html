@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рамка вокруг текста</title>
+  <style>
+    .wrapper {
+      margin: 40px;
+    }
+
+    .frame {
+      background: #F05258;
+      color: #FFFFFF;
+      margin-bottom: 30px;
+    }
+
+    p {
+      margin: 0;
+      padding: 5px;
+    }
+
+    /**************** Способ 1 ↓↓↓ *************************/
+    .frame1 {
+      border: 1px solid #FFFFFF;
+      outline: 1px solid #F05258;
+    }
+
+    /**************** Способ 1 ↑↑↑ *************************/
+
+    /**************** Способ 2 ↓↓↓ *************************/
+    .frame2 {
+      position: relative;
+      border: 1px solid #F05258;
+    }
+
+    .frame2:before {
+      content: " ";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      border: 1px solid #FFFFFF;
+    }
+
+    /**************** Способ 2 ↑↑↑ *************************/
+
+    /**************** Способ 3 ↓↓↓ *************************/
+    .frame3 {
+      box-shadow:
+        0 0 0 1px #FFFFFF,
+        0 0 0 2px #F05258;
+    }
+
+    /**************** Способ 3 ↑↑↑ *************************/
+
+    /**************** Способ 4 ↓↓↓ *************************/
+    .frame4 {
+      box-shadow:
+        inset 0 0 0 1px #F05258,
+        inset 0 0 0 2px #FFFFFF;
+    }
+
+    /**************** Способ 4 ↑↑↑ *************************/
+
+    /**************** Способ 5 ↓↓↓ *************************/
+    .frame5 {
+      padding: 1px;
+      background-clip: content-box;
+      border: solid 1px #F05258;
+    }
+
+    /**************** Способ 5 ↑↑↑ *************************/
+
+    /**************** Способ 6 ↓↓↓ *************************/
+    .frame6 {
+      border: double 4px #FFFFFF;
+    }
+
+    /**************** Способ 6 ↑↑↑ *************************/
+  </style>
+</head>
+
+<body>
+
+  <!-- Придумайте пять способов создания рамки вокруг абзаца произвольного текста (тега <p>). Изменять и модифицировать код HTML нельзя, все изменения делаются только через стили. Кроссбраузерность можно не учитывать. -->
+
+  <div class="wrapper">
+    Способ 1:
+    <div class="frame1 frame">
+      <p>Рамка вокруг текста</p>
+    </div>
+    Способ 2:
+    <div class="frame2 frame">
+      <p>Рамка вокруг текста</p>
+    </div>
+    Способ 3:
+    <div class="frame3 frame">
+      <p>Рамка вокруг текста</p>
+    </div>
+    Способ 4:
+    <div class="frame4 frame">
+      <p>Рамка вокруг текста</p>
+    </div>
+    Способ 5:
+    <div class="frame5 frame">
+      <p>Рамка вокруг текста</p>
+    </div>
+    Способ 6:
+    <div class="frame6 frame">
+      <p>Рамка вокруг текста</p>
+    </div>
+  </div>
+
+</body>
+
+</html>
