@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Обратная связь</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .feedback {
+      border-radius: 0 10px 10px 0;
+      width: 300px;
+      background: #333;
+      /* Цвет фона */
+      color: #fff;
+      /* Цвет текста */
+      position: fixed;
+      /* Фиксируем на одном месте  */
+      min-height: 100px;
+      /* Минимальная высота */
+      top: 100px;
+      left: -320px;
+      border-right: 20px solid #fc0;
+      /* Оранжевая граница справа */
+      padding: 10px;
+      transition: left 1s;
+      /* Анимация */
+    }
+
+    .feedback img {
+      float: left;
+      margin: 0 10px 0 0;
+    }
+
+    .feedback::after {
+      content: 'Обратная связь';
+      /* Выводим текст */
+      color: #000;
+      /* Цвет надписи */
+      position: absolute;
+      /* Абсолютное позиционирование */
+      right: -60px;
+      bottom: 50px;
+      transform: rotate(-90deg);
+      /* Поворачиваем текст */
+      -webkit-transform: rotate(-90deg);
+    }
+
+    .feedback:hover {
+      left: 0;
+      /* При наведении сдвигаем вправо */
+    }
+
+    img {
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Сделайте блок с фиксированным положением, который не будет изменять свою позицию при прокрутке страницы. Изначально блок практически полностью скрыт (рис. 1), но при наведении на него курсора мыши он плавно выезжает вправо (рис. 2). Если курсор убрать, то блок плавно возвращается в исходное положение.
+  Блок имеет фиксированные размеры и должен корректно отображаться в современных браузерах. -->
+
+  <div class="feedback">
+    <img src="./avatar.jpg" alt="" width="100" height="100">
+    Если у вас возникли вопросы по этому коду, звоните мне по телефону:
+    555-3298. Звонок платный.
+  </div>
+
+</body>
+
+</html>
