@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ход конём</title>
+  <style>
+    .wrapper {
+      margin: 40px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+      color: #FF0000;
+      font-size: 37px;
+      text-align: center;
+      vertical-align: middle;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    td input {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    [id^=c] {
+      display: none;
+    }
+
+    [id^=c]+label {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    [id^=c]+label:before {
+      content: '♘';
+      display: inline-block;
+      color: #FF0000;
+      font-size: 37px;
+      transform: scale(0);
+      transition: 0.3s;
+      vertical-align: middle;
+    }
+
+    [id^=c]:checked+label:before {
+      transform: scale(1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Сделайте таблицу 3х3 с фиксированной шириной и высотой ячеек. При щелчке по любой ячейке в ней выводится изображение коня (рис. 1). Повторный щелчок по ячейке убирает в ней коня. Код должен работать во всех современных браузерах. -->
+  <!-- Символ коня скопируйте отсюда: ♘ -->
+
+  <table>
+    <tr>
+      <td><input type="checkbox" name="c1" id="c1" checked><label for="c1"></label></td>
+      <td><input type="checkbox" name="c2" id="c2"><label for="c2"></label></td>
+      <td><input type="checkbox" name="c3" id="c3"><label for="c3"></label></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="c4" id="c4"><label for="c4"></label></td>
+      <td><input type="checkbox" name="c5" id="c5"><label for="c5"></label></td>
+      <td><input type="checkbox" name="c6" id="c6" checked><label for="c6"></label></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="c7" id="c7" checked><label for="c7"></label></td>
+      <td><input type="checkbox" name="c8" id="c8"><label for="c8"></label></td>
+      <td><input type="checkbox" name="c9" id="c9"><label for="c9"></label></td>
+    </tr>
+  </table>
+
+
+</body>
+
+</html>
