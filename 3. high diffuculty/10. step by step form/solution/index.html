@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <!-- Сверстайте пошаговую форму из PSD-файлов для ввода информации о коктейле. -->
+  <!-- В процессе работы учтите следующие условия.
+  Разрешается использовать JavaScript, а также любые библиотеки и фреймворки.
+  Валидная вёрстка на HTML5.
+  Валидность CSS не важна.
+  Корректное отображение в браузерах IE9, Opera 11.10, Firefox 5, Safari 5, Chrome 12 и их старших версиях.
+  Работоспособность формы в IE8.
+  Допустимы незначительные отклонения от макета при отображении в разных браузерах. -->
+
+  <div id="wrapper">
+    <nav>
+      <input type="radio" class="nav-checkbox" name="radio" id="checkbox-1">
+      <label class="nav-label" for="checkbox-1"><img src="http://funkyimg.com/i/TZdt.png"
+          alt="note">Описание<span></span></label>
+
+      <input type="radio" class="nav-checkbox" name="radio" id="checkbox-2">
+      <label class="nav-label" for="checkbox-2"><img src="http://funkyimg.com/i/TZdx.png"
+          alt="bottle">Ингредиенты<span></span></label>
+
+      <input type="radio" class="nav-checkbox" name="radio" id="checkbox-3">
+      <label class="nav-label" for="checkbox-3"><img src="http://funkyimg.com/i/TZdu.png"
+          alt="plate">Параметры<span></span></label>
+
+      <input type="radio" class="nav-checkbox" name="radio" id="checkbox-4">
+      <label class="nav-label" for="checkbox-4"><img src="http://funkyimg.com/i/TZdr.png"
+          alt="goblet">Бокалы<span></span></label>
+    </nav>
+
+    <form id="mainForm">
+
+      <!--              step one                    -->
+      <div class="formWrapper" id="formOne">
+        <div class="topCorner"></div>
+        <h3><img src="http://funkyimg.com/i/TZdu.png" alt="note">Описание</h3>
+        <div id="imageWrapper">
+          <img src="http://funkyimg.com/i/TZds.png" alt="">
+          <div id="loadWrapper"><label for="loadImg">Загрузить</label></div>
+          <input type="file" id="loadImg" name="img" accept="image/jpeg,image/png,image/gif">
+        </div>
+        <fieldset class="firstForm-fieldset">
+          <input type="text" maxlength="45" id="coctailName1" placeholder="Название коктейля"><label
+            for="coctailName1">&nbsp;</label>
+          <input type="text" maxlength="45" id="coctailName2" placeholder="Альтернативное название через запятую"><label
+            for="coctailName2">&nbsp;</label>
+          <textarea maxlength="225" id="smallText" placeholder="Краткое описание"></textarea><label
+            for="smallText">&nbsp;</label>
+        </fieldset>
+        <textarea id="largeTextarea" maxlength="339" name="largeText"
+          placeholder="Инструкция для приготовления"></textarea><label for="largeTextarea">&nbsp;</label>
+        <div class="next">
+          <div class="next-angle"></div><span>Ингредиенты</span>
+        </div>
+
+        <div class="bottomCorner"></div>
+        <div class="clearfix"></div>
+      </div>
+
+      <!--              step two                   -->
+      <div class="formWrapper" id="formTwo">
+        <div class="topCorner"></div>
+        <h3><img src="http://funkyimg.com/i/TZkh.png" alt="note">Ингредиенты</h3>
+        <div id="strawberry">
+          <div class="strawberry-tip"><span>Украшение?</span>
+            <div id="square-arrow"></div>
+          </div>
+        </div>
+
+        <div class="line">
+
+          <div class="line-select">
+            <span>Название ингредиента</span>
+            <div class="line-select-arrow">
+              <div class="line-select-arrow-inner">
+                <div class="line-select-arrow-inner-triangle"></div>
+              </div>
+            </div>
+            <div class="line-select-options">
+              <div class="line-select-options-triangle"></div>
+              <h4>Безалкогольные напитки</h4>
+              <ul class="line-select-options-list">
+                <li>✔ Вода</li>
+                <li>✔ Сок</li>
+                <li>✔ Молоко</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="line-quantity">
+            <input type="text" name="formQuantity" value="1">
+            <div class="line-quantity-arrows">
+              <div class="line-quantity-arrows-up">
+                <div class="small-triangle-up"></div>
+              </div>
+              <div class="line-quantity-arrows-down">
+                <div class="small-triangle-down"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dimension-select">
+            <span>мл</span>
+            <div class="dimension-select-arrow">
+              <div class="dimension-select-arrow-inner">
+                <div class="dimension-select-arrow-inner-triangle"></div>
+              </div>
+            </div>
+            <div class="dimension-select-options">
+              <div class="line-select-options-triangle"></div>
+              <ul class="dimension-select-options-list">
+                <li class="selected-dimension">✔ мл</li>
+                <li>✔ гр</li>
+                <li>✔ кг</li>
+              </ul>
+            </div>
+          </div>
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="checkbox-style" id="form2Checkbox-1">
+            <label for="form2Checkbox-1"></label>
+          </div>
+
+        </div>
+
+        <div class="line">
+
+          <div class="line-select">
+            <span>Название ингредиента</span>
+            <div class="line-select-arrow">
+              <div class="line-select-arrow-inner">
+                <div class="line-select-arrow-inner-triangle"></div>
+              </div>
+            </div>
+            <div class="line-select-options">
+              <div class="line-select-options-triangle"></div>
+              <h4>Безалкогольные напитки</h4>
+              <ul class="line-select-options-list">
+                <li>✔ Вода</li>
+                <li>✔ Сок</li>
+                <li>✔ Молоко</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="line-quantity">
+            <input type="text" name="formQuantity" value="1">
+            <div class="line-quantity-arrows">
+              <div class="line-quantity-arrows-up">
+                <div class="small-triangle-up"></div>
+              </div>
+              <div class="line-quantity-arrows-down">
+                <div class="small-triangle-down"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dimension-select">
+            <span>мл</span>
+            <div class="dimension-select-arrow">
+              <div class="dimension-select-arrow-inner">
+                <div class="dimension-select-arrow-inner-triangle"></div>
+              </div>
+            </div>
+            <div class="dimension-select-options">
+              <div class="line-select-options-triangle"></div>
+              <ul class="dimension-select-options-list">
+                <li class="selected-dimension">✔ мл</li>
+                <li>✔ гр</li>
+                <li>✔ кг</li>
+              </ul>
+            </div>
+          </div>
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="checkbox-style" id="form2Checkbox-2">
+            <label for="form2Checkbox-2"></label>
+          </div>
+
+        </div>
+        <div class="line">
+
+          <div class="line-select">
+            <span>Название ингредиента</span>
+            <div class="line-select-arrow">
+              <div class="line-select-arrow-inner">
+                <div class="line-select-arrow-inner-triangle"></div>
+              </div>
+            </div>
+            <div class="line-select-options">
+              <div class="line-select-options-triangle"></div>
+              <h4>Безалкогольные напитки</h4>
+              <ul class="line-select-options-list">
+                <li>✔ Вода</li>
+                <li>✔ Сок</li>
+                <li>✔ Молоко</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="line-quantity">
+            <input type="text" name="formQuantity" value="1">
+            <div class="line-quantity-arrows">
+              <div class="line-quantity-arrows-up">
+                <div class="small-triangle-up"></div>
+              </div>
+              <div class="line-quantity-arrows-down">
+                <div class="small-triangle-down"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dimension-select">
+            <span>мл</span>
+            <div class="dimension-select-arrow">
+              <div class="dimension-select-arrow-inner">
+                <div class="dimension-select-arrow-inner-triangle"></div>
+              </div>
+            </div>
+            <div class="dimension-select-options">
+              <div class="line-select-options-triangle"></div>
+              <ul class="dimension-select-options-list">
+                <li class="selected-dimension">✔ мл</li>
+                <li>✔ гр</li>
+                <li>✔ кг</li>
+              </ul>
+            </div>
+          </div>
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="checkbox-style" id="form2Checkbox-3">
+            <label for="form2Checkbox-3"></label>
+          </div>
+
+        </div>
+        <div class="line">
+
+          <div class="line-select">
+            <span>Название ингредиента</span>
+            <div class="line-select-arrow">
+              <div class="line-select-arrow-inner">
+                <div class="line-select-arrow-inner-triangle"></div>
+              </div>
+            </div>
+            <div class="line-select-options">
+              <div class="line-select-options-triangle"></div>
+              <h4>Безалкогольные напитки</h4>
+              <ul class="line-select-options-list">
+                <li>✔ Вода</li>
+                <li>✔ Сок</li>
+                <li>✔ Молоко</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="line-quantity">
+            <input type="text" name="formQuantity" value="1">
+            <div class="line-quantity-arrows">
+              <div class="line-quantity-arrows-up">
+                <div class="small-triangle-up"></div>
+              </div>
+              <div class="line-quantity-arrows-down">
+                <div class="small-triangle-down"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dimension-select">
+            <span>мл</span>
+            <div class="dimension-select-arrow">
+              <div class="dimension-select-arrow-inner">
+                <div class="dimension-select-arrow-inner-triangle"></div>
+              </div>
+            </div>
+            <div class="dimension-select-options">
+              <div class="line-select-options-triangle"></div>
+              <ul class="dimension-select-options-list">
+                <li class="selected-dimension">✔ мл</li>
+                <li>✔ гр</li>
+                <li>✔ кг</li>
+              </ul>
+            </div>
+          </div>
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="checkbox-style" id="form2Checkbox-4">
+            <label for="form2Checkbox-4"></label>
+          </div>
+
+        </div>
+        <div class="line">
+
+          <div class="line-select">
+            <span>Название ингредиента</span>
+            <div class="line-select-arrow">
+              <div class="line-select-arrow-inner">
+                <div class="line-select-arrow-inner-triangle"></div>
+              </div>
+            </div>
+            <div class="line-select-options">
+              <div class="line-select-options-triangle"></div>
+              <h4>Безалкогольные напитки</h4>
+              <ul class="line-select-options-list">
+                <li>✔ Вода</li>
+                <li>✔ Сок</li>
+                <li>✔ Молоко</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="line-quantity">
+            <input type="text" name="formQuantity" value="1">
+            <div class="line-quantity-arrows">
+              <div class="line-quantity-arrows-up">
+                <div class="small-triangle-up"></div>
+              </div>
+              <div class="line-quantity-arrows-down">
+                <div class="small-triangle-down"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dimension-select">
+            <span>мл</span>
+            <div class="dimension-select-arrow">
+              <div class="dimension-select-arrow-inner">
+                <div class="dimension-select-arrow-inner-triangle"></div>
+              </div>
+            </div>
+            <div class="dimension-select-options">
+              <div class="line-select-options-triangle"></div>
+              <ul class="dimension-select-options-list">
+                <li class="selected-dimension">✔ мл</li>
+                <li>✔ гр</li>
+                <li>✔ кг</li>
+              </ul>
+            </div>
+          </div>
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="checkbox-style" id="form2Checkbox-5">
+            <label for="form2Checkbox-5"></label>
+          </div>
+
+        </div>
+        <div class="line">
+
+          <div class="line-select">
+            <span>Название ингредиента</span>
+            <div class="line-select-arrow">
+              <div class="line-select-arrow-inner">
+                <div class="line-select-arrow-inner-triangle"></div>
+              </div>
+            </div>
+            <div class="line-select-options">
+              <div class="line-select-options-triangle"></div>
+              <h4>Безалкогольные напитки</h4>
+              <ul class="line-select-options-list">
+                <li>✔ Вода</li>
+                <li>✔ Сок</li>
+                <li>✔ Молоко</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="line-quantity">
+            <input type="text" name="formQuantity" value="1">
+            <div class="line-quantity-arrows">
+              <div class="line-quantity-arrows-up">
+                <div class="small-triangle-up"></div>
+              </div>
+              <div class="line-quantity-arrows-down">
+                <div class="small-triangle-down"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dimension-select">
+            <span>мл</span>
+            <div class="dimension-select-arrow">
+              <div class="dimension-select-arrow-inner">
+                <div class="dimension-select-arrow-inner-triangle"></div>
+              </div>
+            </div>
+            <div class="dimension-select-options">
+              <ul class="dimension-select-options-list">
+                <div class="line-select-options-triangle"></div>
+                <li class="selected-dimension">✔ мл</li>
+                <li>✔ гр</li>
+                <li>✔ кг</li>
+              </ul>
+            </div>
+          </div>
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="checkbox-style" id="form2Checkbox-6">
+            <label for="form2Checkbox-6"></label>
+          </div>
+
+        </div>
+        <div class="line">
+
+          <div class="line-select">
+            <span>Название ингредиента</span>
+            <div class="line-select-arrow">
+              <div class="line-select-arrow-inner">
+                <div class="line-select-arrow-inner-triangle"></div>
+              </div>
+            </div>
+            <div class="line-select-options">
+              <div class="line-select-options-triangle"></div>
+              <h4>Безалкогольные напитки</h4>
+              <ul class="line-select-options-list">
+                <li>✔ Вода</li>
+                <li>✔ Сок</li>
+                <li>✔ Молоко</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="line-quantity">
+            <input type="text" name="formQuantity" value="1">
+            <div class="line-quantity-arrows">
+              <div class="line-quantity-arrows-up">
+                <div class="small-triangle-up"></div>
+              </div>
+              <div class="line-quantity-arrows-down">
+                <div class="small-triangle-down"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dimension-select">
+            <span>мл</span>
+            <div class="dimension-select-arrow">
+              <div class="dimension-select-arrow-inner">
+                <div class="dimension-select-arrow-inner-triangle"></div>
+              </div>
+            </div>
+            <div class="dimension-select-options">
+              <div class="line-select-options-triangle"></div>
+              <ul class="dimension-select-options-list">
+                <li class="selected-dimension">✔ мл</li>
+                <li>✔ гр</li>
+                <li>✔ кг</li>
+              </ul>
+            </div>
+          </div>
+          <div class="checkbox-wrapper">
+            <input type="checkbox" class="checkbox-style" id="form2Checkbox-7">
+            <label for="form2Checkbox-7"></label>
+          </div>
+
+        </div>
+
+        <div class="next">
+          <div class="next-angle"></div><span>Параметры</span>
+        </div>
+        <div class="previous">
+          <span>Описание</span>
+          <div class="previous-angle"></div>
+        </div>
+        <div class="bottomCorner"></div>
+        <div class="clearfix"></div>
+      </div>
+
+      <!--              step three                 -->
+      <div class="formWrapper" id="formThree">
+        <div class="topCorner"></div>
+        <h3><img src="http://funkyimg.com/i/TZdu.png" alt="note">Параметры приготовления</h3>
+
+        <fieldset>
+          <div class="form3-elemWrapper">
+            <span class="form3-label">✔ Порций</span><br>
+            <div class="line-quantity">
+              <input type="text" name="form3Quantity" value="1">
+              <div class="line-quantity-arrows">
+                <div class="line-quantity-arrows-up">
+                  <div class="small-triangle-up"></div>
+                </div>
+                <div class="line-quantity-arrows-down">
+                  <div class="small-triangle-down"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form3-elemWrapper">
+            <span class="form3-label">✔ Время</span><br>
+            <div class="dimension-select">
+              <span>5 мин.</span>
+              <div class="dimension-select-arrow">
+                <div class="dimension-select-arrow-inner">
+                  <div class="dimension-select-arrow-inner-triangle"></div>
+                </div>
+              </div>
+              <div class="dimension-select-options">
+                <div class="line-select-options-triangle"></div>
+                <ul class="dimension-select-options-list">
+                  <li class="selected-dimension">✔ 5 мин.</li>
+                  <li>✔ 10 мин.</li>
+                  <li>✔ 15 мин.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="form3-elemWrapper">
+            <span class="form3-label">✔ Сложность</span><br>
+            <div class="line-select">
+              <span>Выбирите из списка</span>
+              <div class="line-select-arrow">
+                <div class="line-select-arrow-inner">
+                  <div class="line-select-arrow-inner-triangle"></div>
+                </div>
+              </div>
+              <div class="line-select-options">
+                <div class="line-select-options-triangle"></div>
+                <ul class="line-select-options-list">
+                  <li>✔ в шейкере</li>
+                  <li>✔ в блендере</li>
+                  <li>✔ в бокале</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="form3-elemWrapper">
+            <span class="form3-label">✔ Метод</span><br>
+            <div class="line-select">
+              <span>Выбирите из списка</span>
+              <div class="line-select-arrow">
+                <div class="line-select-arrow-inner">
+                  <div class="line-select-arrow-inner-triangle"></div>
+                </div>
+              </div>
+              <div class="line-select-options">
+                <div class="line-select-options-triangle"></div>
+                <ul class="line-select-options-list">
+                  <li>✔ в шейкере</li>
+                  <li>✔ в блендере</li>
+                  <li>✔ в бокале</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+        </fieldset>
+
+        <h3 class="wineglass-title"><img src="http://funkyimg.com/i/TZdw.png" alt="note">Тип коктейля</h3>
+        <fieldset>
+
+          <div class="form3-elemWrapper">
+            <span class="form3-label">✔ По крепкости</span><br>
+            <div class="line-select shorterFix">
+              <span>Выбирите из списка</span>
+              <div class="line-select-arrow">
+                <div class="line-select-arrow-inner">
+                  <div class="line-select-arrow-inner-triangle"></div>
+                </div>
+              </div>
+              <div class="line-select-options">
+                <div class="line-select-options-triangle"></div>
+                <ul class="line-select-options-list">
+                  <li>✔ в шейкере</li>
+                  <li>✔ в блендере</li>
+                  <li>✔ в бокале</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="form3-elemWrapper">
+            <span class="form3-label">✔ На основе</span><br>
+            <div class="line-select">
+              <span>Выбирите из списка</span>
+              <div class="line-select-arrow">
+                <div class="line-select-arrow-inner">
+                  <div class="line-select-arrow-inner-triangle"></div>
+                </div>
+              </div>
+              <div class="line-select-options">
+                <div class="line-select-options-triangle"></div>
+                <ul class="line-select-options-list">
+                  <li>✔ в шейкере</li>
+                  <li>✔ в блендере</li>
+                  <li>✔ в бокале</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="form3-elemWrapper">
+            <span class="form3-label">✔ По типу</span><br>
+            <div class="line-select">
+              <span>Выбирите из списка</span>
+              <div class="line-select-arrow">
+                <div class="line-select-arrow-inner">
+                  <div class="line-select-arrow-inner-triangle"></div>
+                </div>
+              </div>
+              <div class="line-select-options">
+                <div class="line-select-options-triangle"></div>
+                <ul class="line-select-options-list">
+                  <li>✔ в шейкере</li>
+                  <li>✔ в блендере</li>
+                  <li>✔ в бокале</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </fieldset>
+
+        <h3 class="wineglass-title"><img src="http://funkyimg.com/i/TZdv.png" alt="note">Теги</h3>
+
+        <fieldset class="tags-fieldset">
+
+          <div class="tag-wrapper">
+            <input type="checkbox" class="checkbox-style2" id="form3Checkbox-1">
+            <label class="form3-tagsLabel" for="form3Checkbox-1">
+              <span class="tag-form"><span></span></span>
+              Бодрящие
+            </label>
+          </div>
+
+          <div class="tag-wrapper">
+            <input type="checkbox" class="checkbox-style2" id="form3Checkbox-2">
+            <label class="form3-tagsLabel" for="form3Checkbox-2">
+              <span class="tag-form"><span></span></span>
+              Соленые
+            </label>
+          </div>
+
+          <div class="tag-wrapper">
+            <input type="checkbox" class="checkbox-style2" id="form3Checkbox-3">
+            <label class="form3-tagsLabel" for="form3Checkbox-3">
+              <span class="tag-form"><span></span></span>
+              Необыч. по употреб.
+            </label>
+          </div>
+
+        </fieldset>
+
+        <fieldset class="tags-fieldset">
+
+          <div class="tag-wrapper">
+            <input type="checkbox" class="checkbox-style2" id="form3Checkbox-4">
+            <label class="form3-tagsLabel" for="form3Checkbox-4">
+              <span class="tag-form"><span></span></span>
+              Горькие
+            </label>
+          </div>
+
+          <div class="tag-wrapper">
+            <input type="checkbox" class="checkbox-style2" id="form3Checkbox-5">
+            <label class="form3-tagsLabel" for="form3Checkbox-5">
+              <span class="tag-form"><span></span></span>
+              Травяные
+            </label>
+          </div>
+
+          <div class="tag-wrapper">
+            <input type="checkbox" class="checkbox-style2" id="form3Checkbox-6">
+            <label class="form3-tagsLabel" for="form3Checkbox-6">
+              <span class="tag-form"><span></span></span>
+              Для компании
+            </label>
+          </div>
+
+        </fieldset>
+
+        <fieldset class="tags-fieldset">
+
+          <div class="tag-wrapper">
+            <input type="checkbox" class="checkbox-style2" id="form3Checkbox-7">
+            <label class="form3-tagsLabel" for="form3Checkbox-7">
+              <span class="tag-form"><span></span></span>
+              Кислые
+            </label>
+          </div>
+
+          <div class="tag-wrapper">
+            <input type="checkbox" class="checkbox-style2" id="form3Checkbox-8">
+            <label class="form3-tagsLabel" for="form3Checkbox-8">
+              <span class="tag-form"><span></span></span>
+              Тропические
+            </label>
+          </div>
+
+          <div class="tag-wrapper">
+            <input type="checkbox" class="checkbox-style2" id="form3Checkbox-9">
+            <label class="form3-tagsLabel" for="form3Checkbox-9">
+              <span class="tag-form"><span></span></span>
+              Для друзей
+            </label>
+          </div>
+
+        </fieldset>
+
+        <fieldset class="tags-fieldset">
+
+          <div class="tag-wrapper">
+            <input type="checkbox" class="checkbox-style2" id="form3Checkbox-10">
+            <label class="form3-tagsLabel" for="form3Checkbox-10">
+              <span class="tag-form"><span></span></span>
+              Сладкие
+            </label>
+          </div>
+
+          <div class="tag-wrapper">
+            <input type="checkbox" class="checkbox-style2" id="form3Checkbox-11">
+            <label class="form3-tagsLabel" for="form3Checkbox-11">
+              <span class="tag-form"><span></span></span>
+              Фруктовые
+            </label>
+          </div>
+
+          <div class="tag-wrapper">
+            <input type="checkbox" class="checkbox-style2" id="form3Checkbox-12">
+            <label class="form3-tagsLabel" for="form3Checkbox-12">
+              <span class="tag-form"><span></span></span>
+              Сладкие
+            </label>
+          </div>
+
+        </fieldset>
+
+        <div class="next">
+          <div class="next-angle">
+          </div><span>Бокалы</span>
+        </div>
+        <div class="previous">
+          <span>Ингредиенты</span>
+          <div class="previous-angle"></div>
+        </div>
+        <div class="bottomCorner"></div>
+        <div class="clearfix"></div>
+      </div>
+
+      <!--               step four                  -->
+      <div class="formWrapper" id="formFour">
+        <div class="topCorner"></div>
+        <h3><img src="http://funkyimg.com/i/TZdr.png" alt="note">Бокалы</h3>
+
+        <div class="gobletWrapper">
+          <div class="goblet-tip">
+            <div class="inner-gobletWrapper">Бокал<br>
+              Для слоистых коктейлей
+              <div class="inner-gobletWrapper-triangle"></div>
+            </div>
+          </div>
+          <img src="http://funkyimg.com/i/TZm2.jpg" alt="goblet">
+          <input type="checkbox" id="gobletChoose1" class="gobletChoose">
+          <label for="gobletChoose1" class="gobletWrapper-choose">
+            <span>Выбрать</span>
+          </label>
+        </div>
+
+        <div class="gobletWrapper">
+          <div class="goblet-tip">
+            <div class="inner-gobletWrapper">Бокал<br>
+              Для слоистых коктейлей
+              <div class="inner-gobletWrapper-triangle"></div>
+            </div>
+          </div>
+          <img src="http://funkyimg.com/i/TZm3.jpg" alt="goblet">
+          <input type="checkbox" id="gobletChoose2" class="gobletChoose">
+          <label for="gobletChoose2" class="gobletWrapper-choose">
+            <span>Выбрать</span>
+          </label>
+        </div>
+
+        <div class="gobletWrapper">
+          <div class="goblet-tip">
+            <div class="inner-gobletWrapper">Бокал<br>
+              Для слоистых коктейлей
+              <div class="inner-gobletWrapper-triangle"></div>
+            </div>
+          </div>
+          <img src="http://funkyimg.com/i/TZm4.jpg" alt="goblet">
+          <input type="checkbox" id="gobletChoose3" class="gobletChoose">
+          <label for="gobletChoose3" class="gobletWrapper-choose">
+            <span>Выбрать</span>
+          </label>
+        </div>
+
+        <div class="gobletWrapper">
+          <div class="goblet-tip">
+            <div class="inner-gobletWrapper">Бокал<br>
+              Для слоистых коктейлей
+              <div class="inner-gobletWrapper-triangle"></div>
+            </div>
+          </div>
+          <img src="http://funkyimg.com/i/TZm5.jpg" alt="goblet">
+          <input type="checkbox" id="gobletChoose4" class="gobletChoose">
+          <label for="gobletChoose4" class="gobletWrapper-choose">
+            <span>Выбрать</span>
+          </label>
+        </div>
+
+        <div class="gobletWrapper">
+          <div class="goblet-tip">
+            <div class="inner-gobletWrapper">Бокал<br>
+              Для слоистых коктейлей
+              <div class="inner-gobletWrapper-triangle"></div>
+            </div>
+          </div>
+          <img src="http://funkyimg.com/i/TZm6.jpg" alt="goblet">
+          <input type="checkbox" id="gobletChoose5" class="gobletChoose">
+          <label for="gobletChoose5" class="gobletWrapper-choose">
+            <span>Выбрать</span>
+          </label>
+        </div>
+
+        <div class="gobletWrapper">
+          <div class="goblet-tip">
+            <div class="inner-gobletWrapper">Бокал<br>
+              Для слоистых коктейлей
+              <div class="inner-gobletWrapper-triangle"></div>
+            </div>
+          </div>
+          <img src="http://funkyimg.com/i/TZm7.jpg" alt="goblet">
+          <input type="checkbox" id="gobletChoose6" class="gobletChoose">
+          <label for="gobletChoose6" class="gobletWrapper-choose">
+            <span>Выбрать</span>
+          </label>
+        </div>
+
+        <div class="gobletWrapper">
+          <div class="goblet-tip">
+            <div class="inner-gobletWrapper">Бокал<br>
+              Для слоистых коктейлей
+              <div class="inner-gobletWrapper-triangle"></div>
+            </div>
+          </div>
+          <img src="http://funkyimg.com/i/TZkZ.jpg" alt="goblet">
+          <input type="checkbox" id="gobletChoose7" class="gobletChoose">
+          <label for="gobletChoose7" class="gobletWrapper-choose">
+            <span>Выбрать</span>
+          </label>
+        </div>
+
+        <div class="gobletWrapper">
+          <div class="goblet-tip">
+            <div class="inner-gobletWrapper">Бокал<br>
+              Для слоистых коктейлей
+              <div class="inner-gobletWrapper-triangle"></div>
+            </div>
+          </div>
+          <img src="http://funkyimg.com/i/TZm1.jpg" alt="goblet">
+          <input type="checkbox" id="gobletChoose8" class="gobletChoose">
+          <label for="gobletChoose8" class="gobletWrapper-choose">
+            <span>Выбрать</span>
+          </label>
+        </div>
+
+        <div class="gobletWrapper">
+          <div class="goblet-tip">
+            <div class="inner-gobletWrapper">Бокал<br>
+              Для слоистых коктейлей
+              <div class="inner-gobletWrapper-triangle"></div>
+            </div>
+          </div>
+          <img src="http://funkyimg.com/i/TZmq.jpg" alt="goblet">
+          <input type="checkbox" id="gobletChoose9" class="gobletChoose">
+          <label for="gobletChoose9" class="gobletWrapper-choose">
+            <span>Выбрать</span>
+          </label>
+        </div>
+
+        <div class="gobletWrapper">
+          <div class="goblet-tip">
+            <div class="inner-gobletWrapper">Бокал<br>
+              Для слоистых коктейлей
+              <div class="inner-gobletWrapper-triangle"></div>
+            </div>
+          </div>
+          <img src="http://funkyimg.com/i/TZmr.jpg" alt="goblet">
+          <input type="checkbox" id="gobletChoose10" class="gobletChoose">
+          <label for="gobletChoose10" class="gobletWrapper-choose">
+            <span>Выбрать</span>
+          </label>
+        </div>
+
+        <div class="gobletWrapper">
+          <div class="goblet-tip">
+            <div class="inner-gobletWrapper">Бокал<br>
+              Для слоистых коктейлей
+              <div class="inner-gobletWrapper-triangle"></div>
+            </div>
+          </div>
+          <img src="http://funkyimg.com/i/TZms.jpg" alt="goblet">
+          <input type="checkbox" id="gobletChoose11" class="gobletChoose">
+          <label for="gobletChoose11" class="gobletWrapper-choose">
+            <span>Выбрать</span>
+          </label>
+        </div>
+
+        <div class="gobletWrapper">
+          <div class="goblet-tip">
+            <div class="inner-gobletWrapper">Бокал<br>
+              Для слоистых коктейлей
+              <div class="inner-gobletWrapper-triangle"></div>
+            </div>
+          </div>
+          <img src="http://funkyimg.com/i/TZmi.jpg" alt="goblet">
+          <input type="checkbox" id="gobletChoose12" class="gobletChoose">
+          <label for="gobletChoose12" class="gobletWrapper-choose">
+            <span>Выбрать</span>
+          </label>
+        </div>
+
+        <div class="gobletWrapper">
+          <div class="goblet-tip">
+            <div class="inner-gobletWrapper">Бокал<br>
+              Для слоистых коктейлей
+              <div class="inner-gobletWrapper-triangle"></div>
+            </div>
+          </div>
+          <img src="http://funkyimg.com/i/TZmj.jpg" alt="goblet">
+          <input type="checkbox" id="gobletChoose13" class="gobletChoose">
+          <label for="gobletChoose13" class="gobletWrapper-choose">
+            <span>Выбрать</span>
+          </label>
+        </div>
+
+        <div class="gobletWrapper">
+          <div class="goblet-tip">
+            <div class="inner-gobletWrapper">Бокал<br>
+              Для слоистых коктейлей
+              <div class="inner-gobletWrapper-triangle"></div>
+            </div>
+          </div>
+          <img src="http://funkyimg.com/i/TZmk.jpg" alt="goblet">
+          <input type="checkbox" id="gobletChoose14" class="gobletChoose">
+          <label for="gobletChoose14" class="gobletWrapper-choose">
+            <span>Выбрать</span>
+          </label>
+        </div>
+
+        <div class="gobletWrapper">
+          <div class="goblet-tip">
+            <div class="inner-gobletWrapper">Бокал<br>
+              Для слоистых коктейлей
+              <div class="inner-gobletWrapper-triangle"></div>
+            </div>
+          </div>
+          <img src="http://funkyimg.com/i/TZmm.jpg" alt="goblet">
+          <input type="checkbox" id="gobletChoose15" class="gobletChoose">
+          <label for="gobletChoose15" class="gobletWrapper-choose">
+            <span>Выбрать</span>
+          </label>
+        </div>
+
+        <div class="gobletWrapper">
+          <div class="goblet-tip">
+            <div class="inner-gobletWrapper">Бокал<br>
+              Для слоистых коктейлей
+              <div class="inner-gobletWrapper-triangle"></div>
+            </div>
+          </div>
+          <img src="http://funkyimg.com/i/TZmn.jpg" alt="goblet">
+          <input type="checkbox" id="gobletChoose16" class="gobletChoose">
+          <label for="gobletChoose16" class="gobletWrapper-choose">
+            <span>Выбрать</span>
+          </label>
+        </div>
+
+        <div class="gobletWrapper">
+          <div class="goblet-tip">
+            <div class="inner-gobletWrapper">Бокал<br>
+              Для слоистых коктейлей
+              <div class="inner-gobletWrapper-triangle"></div>
+            </div>
+          </div>
+          <img src="http://funkyimg.com/i/TZmo.jpg" alt="goblet">
+          <input type="checkbox" id="gobletChoose17" class="gobletChoose">
+          <label for="gobletChoose17" class="gobletWrapper-choose">
+            <span>Выбрать</span>
+          </label>
+        </div>
+
+        <div class="gobletWrapper">
+          <div class="goblet-tip">
+            <div class="inner-gobletWrapper">Бокал<br>
+              Для слоистых коктейлей
+              <div class="inner-gobletWrapper-triangle"></div>
+            </div>
+          </div>
+          <img src="http://funkyimg.com/i/TZmp.jpg" alt="goblet">
+          <input type="checkbox" id="gobletChoose18" class="gobletChoose">
+          <label for="gobletChoose18" class="gobletWrapper-choose">
+            <span>Выбрать</span>
+          </label>
+        </div>
+
+        <div class="gobletWrapper">
+          <img src="#" alt="">
+          <input type="checkbox" id="gobletChoose19" class="gobletChoose">
+
+        </div>
+
+        <div class="gobletWrapper">
+          <img src="#" alt="">
+          <input type="checkbox" id="gobletChoose20" class="gobletChoose">
+
+        </div>
+
+
+        <div class="clearfix"></div>
+        <div class="previous">
+          <span>Параметры</span>
+          <div class="previous-angle"></div>
+        </div>
+        <div class="submitWrapper">
+          <input type="submit" name="formSubmit" value="Отправить">
+        </div>
+        <div class="bottomCorner"></div>
+        <div class="clearfix"></div>
+      </div>
+    </form>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="./main.js"></script>
+
+</body>
+
+</html>
