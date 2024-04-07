@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Текст для галочки</title>
+  <style>
+    input[type="checkbox"]:checked+span {
+      background: #fc0;
+    }
+
+    span {
+      padding: 0 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Создайте страницу, показанную на рис. 1. Текст возле отмеченных галочек должен выделяться фоновым цветом. Код должен корректно работать в последних версиях браузеров Internet Explorer, Firefox, Opera, Safari, Chrome. -->
+
+  <form>
+    <p><label><input type="checkbox" name="sortament" value="1">
+        <span>Балка рукояти</span></label></p>
+    <p><label><input type="checkbox" name="sortament" value="2">
+        <span>Шестерня</span></label></p>
+    <p><label><input type="checkbox" name="sortament" value="3">
+        <span>Вал</span></label></p>
+    <p><label><input type="checkbox" name="sortament" value="4">
+        <span>Пимпочка</span></label></p>
+    <p><input type="submit" value="Отправить"></p>
+  </form>
+
+</body>
+
+</html>
