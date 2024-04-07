@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Так-тикс</title>
+  <style>
+    .wrapper {
+      margin: 40px;
+    }
+
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+      overflow: hidden;
+    }
+
+    td {
+      position: relative;
+      min-width: 100px;
+      height: 100px;
+      border: 1px solid black;
+    }
+
+    span {
+      display: block;
+      width: 72px;
+      height: 72px;
+      background: #0063EF;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+
+    td:hover::after {
+      content: '';
+      width: 100%;
+      height: 10000px;
+      z-index: -1;
+      position: absolute;
+      top: -5000px;
+    }
+
+    td:hover {
+      background: #FFCC00 !important;
+    }
+
+    tr:hover,
+    td:hover::after {
+      background: #FFE581;
+    }
+
+    td:hover>span {
+      background: #000000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Поле для игры в так-тикс имеет размер 5х5 клеток, в каждой клетке содержится круглая фишка (рис. 1). -->
+  <!-- При наведении курсора мыши на любую клетку подсвечивается ряд, строка и сама фишка (рис. 2). -->
+  <!-- Напишите код с использованием только HTML5 и CSS при соблюдении ряда условий:
+  работать должен во всех современных браузерах, на старые версии можно не обращать внимания;
+  все размеры фишек и клеток заданы изначально и не меняются;
+  постарайтесь сделать HTML-код компактным, без ввода дополнительных классов. -->
+
+  <div class="wrapper">
+    <table>
+      <tr>
+        <td><span></span></td>
+        <td><span></span></td>
+        <td><span></span></td>
+        <td><span></span></td>
+        <td><span></span></td>
+      </tr>
+      <tr>
+        <td><span></span></td>
+        <td><span></span></td>
+        <td><span></span></td>
+        <td><span></span></td>
+        <td><span></span></td>
+      </tr>
+      <tr>
+        <td><span></span></td>
+        <td><span></span></td>
+        <td><span></span></td>
+        <td><span></span></td>
+        <td><span></span></td>
+      </tr>
+      <tr>
+        <td><span></span></td>
+        <td><span></span></td>
+        <td><span></span></td>
+        <td><span></span></td>
+        <td><span></span></td>
+      </tr>
+      <tr>
+        <td><span></span></td>
+        <td><span></span></td>
+        <td><span></span></td>
+        <td><span></span></td>
+        <td><span></span></td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+
+</html>
