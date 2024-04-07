@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font: 12px Tahoma, Arial, sans-serif;
+      background: #4e6379;
+    }
+
+    .hosting {
+      background: #fff;
+      overflow: hidden;
+      width: 602px;
+      background: #fff;
+      box-shadow: 0 25px 40px rgba(0, 0, 0, 0.4);
+      border-radius: 5px;
+      margin: auto;
+    }
+
+    .item {
+      float: left;
+      width: 200px;
+      border-left: 1px solid #d9d9d9;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .item:first-child {
+      border: none;
+    }
+
+    .icon {
+      width: 61px;
+      height: 42px;
+      background: url(./hosting.png) center top/155px no-repeat;
+      margin: auto;
+    }
+
+    .cloud {
+      background-position: -50px -95px;
+    }
+
+    .dedicated {
+      background-position: left top;
+    }
+
+    h3 {
+      color: #f56332;
+    }
+
+    .button {
+      background: #f56332;
+      display: inline-block;
+      padding: 5px 10px;
+      text-decoration: none;
+      color: #fff;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
+      border-radius: 2px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Создайте страницу, показанную на рис. 1. Ширина блока фиксирована. Постарайтесь обойтись одним изображением, добавляя его как фоновый рисунок. -->
+
+  <div class="hosting">
+    <div class="item">
+      <div class="icon shared"></div>
+      <h3>Виртуальный хостинг</h3>
+      <p>3.95$ в месяц</p>
+      <a href="#" class="button">Подробнее</a>
+    </div>
+    <div class="item">
+      <div class="icon cloud"></div>
+      <h3>Облачный хостинг</h3>
+      <p>68.95$ в месяц</p>
+      <a href="#" class="button">Подробнее</a>
+    </div>
+    <div class="item">
+      <div class="icon dedicated"></div>
+      <h3>Выделенный сервер</h3>
+      <p>217.95$ в месяц</p>
+      <a href="#" class="button">Подробнее</a>
+    </div>
+  </div>
+
+</body>
+
+</html>
