@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шаги</title>
+  <style>
+    .wrapper {
+      margin: 40px;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+
+    .steps * {
+      display: inline-block;
+      margin-left: -7px;
+      padding: 5px 20px;
+      background: linear-gradient(to bottom, #DEDEDE 0%, #BFBFBF 50%, #DEDEDE 100%);
+      clip-path: polygon(93% 0, 100% 50%, 93% 100%, 0% 100%, 7% 50%, 0% 0%);
+    }
+
+    .steps *:first-child {
+      clip-path: polygon(93% 0, 100% 50%, 93% 100%, 0% 100%, 0% 0%);
+    }
+
+    .steps *:last-child {
+      clip-path: polygon(100% 0, 100% 100%, 0% 100%, 7% 50%, 0% 0%);
+    }
+
+    .step_active {
+      color: #FFFFFF;
+      background: linear-gradient(to bottom, #AEE188 0%, #66C620 50%, #AEE188 100%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Сделайте указатель шагов показанный ниже на рисунке. Шаги должны корректно отображаться в браузерах Opera 12+, Firefox
+  6+, Chrome 12+. Для IE достаточно сделать горизонтальные прямоугольники без стрелок и градиентов. Все элементы должны
+  отображаться правильно независимо от выбранного текущего шага. -->
+
+  <div class="wrapper">
+    <div class="steps">
+      <div class="step1">Шаг 1</div>
+      <div class="step2 step_active">Шаг 2</div>
+      <div class="step3">Шаг 3</div>
+      <div class="step4">Шаг 4</div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
