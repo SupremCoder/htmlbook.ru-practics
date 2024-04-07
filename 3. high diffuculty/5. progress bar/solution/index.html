@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Индикатор выполнения</title>
+  <style>
+    #progress {
+      width: 250px;
+      /* Ширина индикатора */
+      border: 1px solid #333;
+      /* Параметры рамки */
+      position: relative;
+      /* Относительное позиционирование */
+      background: #fff;
+      /* Цвет фона */
+    }
+
+    #progress .bg {
+      background: #f2f0e3;
+      /* Цвет фона индикатора */
+      position: absolute;
+      /* Абсолютное позиционирование */
+      height: 100%;
+      /* Фон занимает всю высоту */
+      width: 50%;
+      /* Ширина цветной области */
+    }
+
+    #progress .begin,
+    #progress .end {
+      position: absolute;
+      /* Абсолютное позиционирование */
+      font-size: 0.9em;
+      /* Размер текста */
+      top: 1px;
+      /* Сдвигаем вниз */
+    }
+
+    #progress .begin {
+      padding-left: 3px;
+      /* Отступ слева */
+    }
+
+    #progress .end {
+      right: 0;
+      /* Располагаем по правому краю */
+      padding-right: 3px;
+      /* Отступ справа */
+    }
+
+    #progress .current {
+      position: relative;
+      /* Относительное позиционирование */
+      text-align: center;
+      /* Выравниваем по центру */
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Создать веб-страницу, показанную на рис. 1. -->
+  <!-- При этом необходимо соблюсти следующие условия:
+валидный строгий XHTML-код;
+валидный CSS 2.1;
+корректное отображение в браузерах Internet Explorer 8+, Opera 11+, Firefox 6+, Chrome 8+;
+таблицы не применяются;
+рисунки не используются;
+ширина индикатора равна 250 пикселов;
+ширина цветной области выполнения должна задаваться в процентах от общей ширины индикатора. -->
+
+  <div id="progress">
+    <div class="bg"></div>
+    <span class="begin">0</span>
+    <span class="end">5</span>
+    <div class="current">50%</div>
+  </div>
+
+</body>
+
+</html>
