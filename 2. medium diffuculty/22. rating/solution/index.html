@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рейтинг</title>
+  <style>
+    .rating {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      justify-content: space-between;
+      font-size: 30px;
+      border-radius: 10px;
+      background: #909497;
+    }
+
+    .rating__left {
+      padding: 20px 60px;
+      color: #FFFFFF;
+      background: #A3C741;
+      border-radius: 10px 0 0 10px;
+    }
+
+    .rating__right {
+      padding: 20px 10px;
+      color: #FFFFFF;
+    }
+
+    .btn {
+      width: 40px;
+      height: 40px;
+      margin: 0 20px;
+      font-size: 34px;
+      font-weight: 700;
+      color: #FFFFFF;
+      border: 0;
+      border-radius: 5px;
+      box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn-minus {
+      background: #B63636;
+    }
+
+    .btn-plus {
+      background: #9DC538;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Сделайте страницу, показанную на рис. 1. Блок тянется вместе с шириной окна браузера, ширина левой части с числом и положение кнопок справа не меняется. -->
+
+  <div class="rating">
+    <div class="rating__left">9691</div>
+    <div class="rating__right">
+      <button class="btn-minus btn">-</button>
+      <span>6</span>
+      <button class="btn-plus btn">+</button>
+    </div>
+  </div>
+
+</body>
+
+</html>
