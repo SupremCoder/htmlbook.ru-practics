@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Блок с указателем</title>
+  <style>
+    body {
+      background: #333333;
+    }
+
+    .wrapper {
+      margin: 40px;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 30px;
+    }
+
+    .pointer {
+      position: relative;
+      margin-top: 10%;
+      padding: 40px 80px;
+      color: #FFFFFF;
+      text-align: center;
+      background: #88B7D5;
+      border: 4px solid #C2E1F5;
+
+    }
+
+    .pointer:after {
+      position: absolute;
+      left: 50%;
+      top: -38.9px;
+      width: 70px;
+      height: 70px;
+      clip-path: polygon(0 0, 0% 100%, 100% 0);
+      transform: rotate(45deg);
+      background: #88B7D5;
+      border: 4px solid #C2E1F5;
+      content: "";
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Сделайте страницу, как показано на рис. 1. Ширина блока резиновая и меняется в зависимости от размеров окна браузера.
+  Указатель всегда располагается посередине блока, размеры указателя фиксированы. -->
+
+  <body>
+    <div class="wrapper">
+      <div class="pointer">Дистанции огромного размера</div>
+    </div>
+  </body>
+
+</body>
+
+</html>
