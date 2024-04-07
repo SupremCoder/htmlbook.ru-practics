@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Социальные связи</title>
+  <style>
+    .wrapper {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      margin: 40px;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+
+    .person {
+      min-width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      margin-right: 30px;
+      border: 4px solid #D2C8C9;
+      position: relative;
+    }
+
+    .person1 {
+      background: url(./girl.jpg) 50%/100% no-repeat;
+    }
+
+    .person2 {
+      background: url(./woman.jpg) 50%/100% no-repeat;
+    }
+
+    .person3 {
+      background: url(./man.jpg) 50%/100% no-repeat;
+    }
+
+    .person a {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+    }
+
+    .person a:hover {
+      cursor: pointer;
+    }
+
+    .vk {
+      top: 0px;
+      left: 14px;
+      background: url(https://cdn.icon-icons.com/icons2/1233/PNG/512/1492718766-vk_83600.png) 50%/100% no-repeat;
+    }
+
+    .vk:hover {
+      background: url(https://image.flaticon.com/icons/svg/145/145813.svg) 50%/100% no-repeat;
+    }
+
+    .twitter {
+      top: 27px;
+      left: -6px;
+      background: url(https://cdn.icon-icons.com/icons2/1233/PNG/512/1492718759-twitter_83614.png) 50%/100% no-repeat;
+    }
+
+    .twitter:hover {
+      background: url(https://cdn.iconfinder.com/data/icons/basicolor-reading-writing/24/077_twitter-512.png) 50%/100% no-repeat;
+    }
+
+    .facebook {
+      top: 59px;
+      left: -17px;
+      background: url(https://cdn.icon-icons.com/icons2/1233/PNG/512/1492718745-facebook_83608.png) 50%/100% no-repeat;
+    }
+
+    .facebook:hover {
+      background: url(https://image.flaticon.com/icons/svg/145/145802.svg) 50%/100% no-repeat;
+    }
+
+    .email {
+      top: 144px;
+      left: 63px;
+      background: url(https://cdn.icon-icons.com/icons2/1233/PNG/512/1492718759-mail_83619.png) 50%/100% no-repeat;
+    }
+
+    .email:hover {
+      background: url(https://lms.bspu.ru/pluginfile.php/27/mod_forum/post/384/E-Mail-PNG-Free-Download.png) 50%/100% no-repeat;
+    }
+
+    .email:hover:after {
+      content: attr(data-title);
+      position: absolute;
+      top: 35px;
+      width: 65px;
+      z-index: 1;
+      padding: 3px 6px;
+      color: #000000;
+      font-size: 0.5em;
+      background: linear-gradient(to bottom, #FFFFFF, #E6E6EE);
+      border: 1px solid #000000;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Сделайте страницу, как показано на рис. 1. Иконки вокруг изображений являются ссылками, при наведении на них они меняют свой цвет (рис. 2). -->
+
+  <div class="wrapper">
+    <div class="person1 person">
+      <a href="#" class="vk"></a>
+      <a href="#" class="twitter"></a>
+      <a href="#" class="facebook"></a>
+      <a href="#" class="email" data-title="Написать письмо"></a>
+    </div>
+    <div class="person2 person">
+      <a href="#" class="vk"></a>
+      <a href="#" class="email" data-title="Написать письмо"></a>
+    </div>
+    <div class="person3 person">
+      <a href="#" class="vk"></a>
+      <a href="#" class="facebook"></a>
+      <a href="#" class="email" data-title="Написать письмо"></a>
+    </div>
+  </div>
+
+</body>
+
+</html>
