@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Таблица с зеброй</title>
+  <style>
+    .wrapper {
+      margin: 30px;
+    }
+
+    .lux {
+      width: 300px;
+      border: 1px solid #a52a2a;
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    .lux th {
+      background: #a52a2a;
+      color: white;
+    }
+
+    .lux td {
+      border-bottom: 1px solid black;
+      /* Правки 1 ↓↓↓ */
+      text-align: center;
+      border-bottom: 1px solid #a52a2a;
+      /* Правки 1 ↑↑↑ */
+    }
+
+    /* Правки 2 ↓↓↓ */
+    .lux td:first-child {
+      text-align: left;
+    }
+
+    /* Правки 2 ↑↑↑ */
+
+    .lux td,
+    .lux th {
+      padding: 4px;
+    }
+
+    /* Правки 3 ↓↓↓ */
+    .lux tr {
+      background: #FFFFF0;
+    }
+
+    .lux tr:nth-child(odd) {
+      background: #FFF8DC;
+    }
+
+    /* Правки 3 ↑↑↑ */
+  </style>
+</head>
+
+<body>
+
+  <!-- Измените стиль для таблицы, чтобы она получилась, как показано на рис. 1. Вносить изменения в код таблицы нельзя, всё оформление должно делаться только через стили. -->
+  <!-- Сам код таблицы приведён в примере 1. -->
+
+  <div class="wrapper">
+    <table class="lux">
+      <tr>
+        <th></th>
+        <th>2004</th>
+        <th>2005</th>
+        <th>2006</th>
+      </tr>
+      <tr>
+        <td>Рубины</td>
+        <td>43</td>
+        <td>51</td>
+        <td>79</td>
+      </tr>
+      <tr>
+        <td>Изумруды</td>
+        <td>28</td>
+        <td>34</td>
+        <td>48</td>
+      </tr>
+      <tr>
+        <td>Сапфиры</td>
+        <td>29</td>
+        <td>57</td>
+        <td>36</td>
+      </tr>
+      <tr>
+        <td>Аметисты</td>
+        <td>23</td>
+        <td>64</td>
+        <td>97</td>
+      </tr>
+    </table>
+  </div>
+
+
+</body>
+
+</html>
