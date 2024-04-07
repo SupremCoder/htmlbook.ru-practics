@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Эскиз</title>
+  <style>
+    .wrapper {
+      margin: 40px;
+    }
+
+    .working-sketch {
+      position: relative;
+      min-width: 100px;
+      padding: 10px;
+      background: #F0F0F0;
+      border: 1px solid black;
+    }
+
+    .corner {
+      position: absolute;
+      border: 1px solid black;
+      width: 15px;
+      height: 15px;
+    }
+
+    .corner-top-left,
+    .corner-top-right {
+      border-top: 0;
+      top: -16px;
+    }
+
+    .corner-top-left {
+      left: -16px;
+      border-left: 0;
+    }
+
+    .corner-top-right {
+      right: -16px;
+      border-right: 0;
+    }
+
+    .corner-bottom-left,
+    .corner-bottom-right {
+      top: 38px;
+      border-bottom: 0;
+    }
+
+    .corner-bottom-left {
+      left: -16px;
+      border-left: 0;
+    }
+
+    .corner-bottom-right {
+      right: -16px;
+      border-right: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Сделайте блок, показанный на рис. 1. -->
+  <!-- Необходимо соблюсти следующие условия.
+
+  Валидная вёрстка на HTML5.
+  Валидность CSS не важна.
+  Таблицы и их имитация через стили не применяются.
+  Уголки имеют фиксированный размер, ширина и высота уголков одинакова, задаётся в пикселах.
+  Корректное отображение в браузерах IE9, Opera 11.10+, Firefox 5, Safari 5.0.5, Chrome 12+.
+  Допустимы незначительные отклонения от макета при отображении в разных браузерах. -->
+
+  <div class="wrapper">
+    <div class="working-sketch">
+      Рабочий эскиз
+      <span class="corner corner-top-left"></span>
+      <span class="corner corner-top-right"></span>
+      <span class="corner corner-bottom-left"></span>
+      <span class="corner corner-bottom-right"></span>
+    </div>
+  </div>
+
+</body>
+
+</html>
