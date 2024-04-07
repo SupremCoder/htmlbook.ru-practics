@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шаг 4</title>
+  <style>
+    .wrapper {
+      margin: 40px;
+      font-size: 30px;
+    }
+
+    .steps {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      align-items: center;
+      width: 800px;
+    }
+
+    .step {
+      width: 30px;
+      height: 30px;
+      padding: 30px;
+      text-align: center;
+      color: #FFFFFF;
+      border-radius: 50%;
+      background: #B2D235;
+    }
+
+    .stepline {
+      margin: 0 -2px;
+      width: 120px;
+      height: 8px;
+      background: #CCCCCC;
+      z-index: -1;
+    }
+
+    /* Обращаемся ко предпоследнему блоку step */
+    .step:nth-last-child(-n+3) {
+      background: #AB4A9C;
+    }
+
+    /* Обращаемся ко последнему блоку step */
+    .step:last-child {
+      color: #000000;
+      background: #CCCCCC;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Сделайте страницу, как показано на рис. 1. Все размеры заданы в пикселах и не меняются при расширении окна браузера.
+Отображаться страница должна правильно во всех современных браузерах. -->
+
+  <div class="wrapper">
+    <div class="steps">
+      <div class="step1 step">1</div>
+      <div class="stepline"></div>
+      <div class="step2 step">2</div>
+      <div class="stepline"></div>
+      <div class="step3 step">3</div>
+      <div class="stepline"></div>
+      <div class="step4 step">4</div>
+      <div class="stepline"></div>
+      <div class="step5 step">5</div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
