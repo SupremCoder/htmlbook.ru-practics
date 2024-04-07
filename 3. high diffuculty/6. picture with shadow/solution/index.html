@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Картинка с тенью</title>
+  <style>
+    div#ranetka {
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+    }
+
+    div#ranetka:after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 10px;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      box-shadow: 0px 0px 18px 15px gray;
+      border-radius: 50%/10%;
+      margin: 20px;
+      margin-bottom: 3px;
+    }
+
+    div#ranetka img {
+      display: block;
+      border-radius: 7px;
+      border: 1px solid #CFCDD0;
+      /* #ccc */
+      padding: 10px;
+      background-color: white;
+      width: 200px;
+      height: 150px;
+    }
+
+    img {
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Создайте блок с тенью фиксированного размера, в котором отображается картинка (рис. 1). Код должен корректно работать во всех современных браузерах. -->
+
+  <h1>Картинка с тенью</h1>
+
+
+  <div id="ranetka"><img alt=" [ranetka] " src="./fruits.jpg"></div>
+
+
+  <h5> образец для подражания: </h5>
+
+  <img alt=" [sample] " src="http://htmlbook.ru/files/images/practical/43.jpg">
+
+  <h5> задача: </h5>
+
+  <p style="width:480px;">Создайте блок с тенью фиксированного размера, в котором отображается картинка (рис. 1). Код
+    должен корректно работать во всех современных браузерах.</p>
+
+  <h5> исходники: </h5>
+
+  <img alt=" [source] " src="http://htmlbook.ru/files/ranetka.jpg">
+  <br>
+  http://htmlbook.ru/practical/kartinka-s-tenyu
+
+
+</body>
+
+</html>
