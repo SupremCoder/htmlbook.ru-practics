@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма регистрации</title>
+  <style>
+    .wrapper {
+      margin: 30px;
+      font-size: 20px;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+
+    form {
+      width: 500px;
+      background: #0690CF;
+      color: #FFFFFF;
+      border: 2px solid #0075B2;
+    }
+
+    .form__title {
+      font-size: 30px;
+      padding: 30px 0 20px 30px;
+      border-bottom: 1px solid #FFFFFF;
+    }
+
+    .form__body {
+      padding: 30px;
+    }
+
+    input {
+      border: 1px solid #ABADB3;
+    }
+
+    input[type="email"] {
+      width: 400px;
+    }
+
+    input[type="password"] {
+      width: 185px;
+    }
+
+    .form__passwords {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      justify-content: space-between;
+      margin: 30px 0;
+    }
+
+    input[type="submit"] {
+      padding: 5px 10px;
+      background: #FFDF7F;
+      border: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Сверстайте форму регистрации, показанную на рис. 1. Ширина формы и её полей фиксирована. -->
+
+  <div class="wrapper">
+    <form action="">
+      <div class="form__title">Регистрация</div>
+
+      <div class="form__body">
+        <div class="form__email">
+          <label for="email">E-mail</label><br />
+          <input type="email" name="email"><br />
+        </div>
+
+        <div class="form__passwords">
+          <div class="form__password">
+            <label for="passowrd">Пароль</label>
+            <input type="password" name="password">
+          </div>
+          <div class="form__password-again">
+            <label for="passowrd-again">Ещё раз</label>
+            <input type="password" name="password-again">
+          </div>
+        </div>
+        <input type="submit">
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>
