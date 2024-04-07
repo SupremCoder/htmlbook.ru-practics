@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .feature {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      width: 320px;
+      margin-bottom: 11px;
+      padding: 10px 15px;
+      color: #FFFFFF;
+      background: #878F94;
+    }
+
+    .feature:before {
+      position: absolute;
+      left: -7px;
+      top: -7.3px;
+      width: 15px;
+      height: 37px;
+      content: '';
+      transform: rotate(27deg);
+      background: #FFFFFF;
+    }
+
+    .feature:after {
+      position: absolute;
+      right: -6px;
+      bottom: -8px;
+      width: 15px;
+      height: 37px;
+      content: '';
+      transform: rotate(27deg);
+      background: #FFFFFF;
+      z-index: 1;
+    }
+
+    .level span {
+      display: inline-block;
+      margin: 0 5px;
+      width: 20px;
+      height: 15px;
+      text-align: start;
+      vertical-align: middle;
+      background: #D3D5D4;
+      transform: skew(-27deg);
+    }
+
+    .charge-level span:nth-child(1),
+    .charge-level span:nth-child(2) {
+      background: #51DBB3;
+    }
+
+    .charge-level span:nth-child(3),
+    .charge-level span:nth-child(4) {
+      background: #DBD651;
+    }
+
+    .charge-level span:nth-child(5),
+    .charge-level span:nth-child(6) {
+      background: #DB8F51;
+    }
+
+    .destructive-force span:nth-child(1),
+    .destructive-force span:nth-child(2) {
+      background: #51DBB3;
+    }
+
+    .destructive-force span:nth-child(3) {
+      background: #DBD651;
+    }
+
+    .recharge span:nth-child(1) {
+      background: #DBD651;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Создайте страницу, показанную на рисунке ниже, без использования изображений. Страница должна корректно отображаться в последних версиях основных браузеров. -->
+
+  <p>Тактико-технические характеристики вооружения ЫЩ-35У (образца 2035 года)</p>
+
+  <div class="charge-level feature">
+    <div class="text">Уровень зарядки</div>
+    <div class="level"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  </div>
+
+  <div class="destructive-force feature">
+    <div class="text">Убойная сила</div>
+    <div class="level"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  </div>
+
+  <div class="recharge feature">
+    <div class="text">Перезарядка</div>
+    <div class="level"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  </div>
+
+</body>
+
+</html>
