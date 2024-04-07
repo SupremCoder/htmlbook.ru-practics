@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Электронный сомелье</title>
+  <link rel="stylesheet" href="style.css">
+  <script
+    src="https://caisse-retraite.googlecode.com/svn-history/r94/trunk/public/js/Jquery/js/jquery-v1.6.1.min.js"></script>
+  <script src="http://cdn.lukej.me/mousewheel/3.1.9/jquery.mousewheel.min.js"></script>
+  <script src="http://www.odnoselchane.ru/js/jquery/jscrollpane-v2.0.0beta11/jquery.jscrollpane.min.js"></script>
+  <style>
+    .scroll-pane {
+      width: 200px;
+      height: 250px;
+      outline: transparent;
+    }
+
+    .method-block {
+      height: 90px;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .inn-big-block {
+      width: 430px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-block">
+    <h1 class="esom">Электронный сомелье</h1>
+    <form action="#" method="post">
+      <div class="mid-block first-block"> <!-- Первый верхний основной блок (блок с выбором бокала) -->
+        <div class="upper-mid-b">
+          <p>Бокалы</p>
+          <p class="up-mid-b-num"><span></span> видов</p>
+        </div>
+        <input type="radio" name="glass" id="ig_1" class="glass_1" checked="checked">
+        <input type="radio" name="glass" id="ig_2" class="glass_2">
+        <input type="radio" name="glass" id="ig_3" class="glass_3">
+        <input type="radio" name="glass" id="ig_4" class="glass_4">
+        <input type="radio" name="glass" id="ig_5" class="glass_5">
+        <input type="radio" name="glass" id="ig_6" class="glass_6">
+        <input type="radio" name="glass" id="ig_7" class="glass_7">
+        <input type="radio" name="glass" id="ig_8" class="glass_8">
+        <label for="ig_1" class="select_g1" title="Первый бокал"></label>
+        <label for="ig_2" class="select_g2" title="Второй бокал"></label>
+        <label for="ig_3" class="select_g3" title="Третий бокал"></label>
+        <label for="ig_4" class="select_g4" title="Четвёртый бокал"></label>
+        <label for="ig_5" class="select_g5" title="Пятый бокал"></label>
+        <label for="ig_6" class="select_g6" title="Шестой бокал"></label>
+        <label for="ig_7" class="select_g7" title="Седьмой бокал"></label>
+        <label for="ig_8" class="select_g8" title="Восьмой бокал"></label>
+        <div class="bokal-block no-scroll">
+          <div>
+            <label for="ig_1" class="select_g1"><img
+                src="https://1.downloader.disk.yandex.ru/disk/b2b24d748fee1d16b50fb4956a62d249/mpfs/pbCv3_y72ozlgddwxn9R-l2zvh-B676nqanh9dkwIVrGAxaYyVnjARxTJw5IY-vXe__zBnXUdG2sH3dQVn719w%3D%3D?uid=0&filename=bokal_1a.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng">
+              <p>Бокал для белого вина</p>
+            </label>
+            <label for="ig_2" class="select_g2"><img
+                src="https://leto39h.storage.yandex.net/rdisk/06a7591315fad99c35d92ed4fa1a0523/mpfs/nAzkCK19llJ0tuMVspXzAHK9Ko56ydKITySg4UHK3_2XQvn-bVl39FNdPZ3iYYr36f97eRbQeqMkHQMm4LVMiw==?uid=0&filename=noimg.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&rtoken=f2a411d18396af4d7567680fb7c83818&rtimestamp=543953b6&force_default=no">
+              <p>Рюмка</p>
+            </label>
+            <label for="ig_3" class="select_g3"><img
+                src="https://leto39h.storage.yandex.net/rdisk/06a7591315fad99c35d92ed4fa1a0523/mpfs/nAzkCK19llJ0tuMVspXzAHK9Ko56ydKITySg4UHK3_2XQvn-bVl39FNdPZ3iYYr36f97eRbQeqMkHQMm4LVMiw==?uid=0&filename=noimg.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&rtoken=f2a411d18396af4d7567680fb7c83818&rtimestamp=543953b6&force_default=no">
+              <p>Тумблер(рокс)</p>
+            </label>
+            <label for="ig_4" class="select_g4"><img
+                src="https://leto39h.storage.yandex.net/rdisk/06a7591315fad99c35d92ed4fa1a0523/mpfs/nAzkCK19llJ0tuMVspXzAHK9Ko56ydKITySg4UHK3_2XQvn-bVl39FNdPZ3iYYr36f97eRbQeqMkHQMm4LVMiw==?uid=0&filename=noimg.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&rtoken=f2a411d18396af4d7567680fb7c83818&rtimestamp=543953b6&force_default=no">
+              <p>Бокал для пива</p>
+            </label>
+            <label for="ig_5" class="select_g5"><img
+                src="https://leto39h.storage.yandex.net/rdisk/06a7591315fad99c35d92ed4fa1a0523/mpfs/nAzkCK19llJ0tuMVspXzAHK9Ko56ydKITySg4UHK3_2XQvn-bVl39FNdPZ3iYYr36f97eRbQeqMkHQMm4LVMiw==?uid=0&filename=noimg.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&rtoken=f2a411d18396af4d7567680fb7c83818&rtimestamp=543953b6&force_default=no">
+              <p>Бокал для шампанского</p>
+            </label>
+            <label for="ig_6" class="select_g6"><img
+                src="https://leto39h.storage.yandex.net/rdisk/06a7591315fad99c35d92ed4fa1a0523/mpfs/nAzkCK19llJ0tuMVspXzAHK9Ko56ydKITySg4UHK3_2XQvn-bVl39FNdPZ3iYYr36f97eRbQeqMkHQMm4LVMiw==?uid=0&filename=noimg.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&rtoken=f2a411d18396af4d7567680fb7c83818&rtimestamp=543953b6&force_default=no">
+              <p>Бокал для мартини</p>
+            </label>
+            <label for="ig_7" class="select_g7"><img
+                src="https://leto39h.storage.yandex.net/rdisk/06a7591315fad99c35d92ed4fa1a0523/mpfs/nAzkCK19llJ0tuMVspXzAHK9Ko56ydKITySg4UHK3_2XQvn-bVl39FNdPZ3iYYr36f97eRbQeqMkHQMm4LVMiw==?uid=0&filename=noimg.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&rtoken=f2a411d18396af4d7567680fb7c83818&rtimestamp=543953b6&force_default=no">
+              <p>Шот(буллет)</p>
+            </label>
+            <label for="ig_8" class="select_g8"><img
+                src="https://leto39h.storage.yandex.net/rdisk/06a7591315fad99c35d92ed4fa1a0523/mpfs/nAzkCK19llJ0tuMVspXzAHK9Ko56ydKITySg4UHK3_2XQvn-bVl39FNdPZ3iYYr36f97eRbQeqMkHQMm4LVMiw==?uid=0&filename=noimg.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&rtoken=f2a411d18396af4d7567680fb7c83818&rtimestamp=543953b6&force_default=no">
+              <p>Коньячка</p>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="mid-block second-block"> <!-- Второй верхний основной блок (блок с выбором типа напитка) -->
+        <div class="upper-mid-b">
+          <p>Тип</p>
+          <p class="up-mid-b-num"><span></span> типов</p>
+        </div>
+        <div class="scroll-pane type-block choose-block">
+          <ul>
+            <li>
+              <input type="radio" name="typeOf" id="typeOf_1">
+              <label for="typeOf_1"><span>Аперитивы</span></label>
+            </li>
+            <li>
+              <input type="radio" name="typeOf" id="typeOf_2">
+              <label for="typeOf_2"><span>Диджестивы</span></label>
+            </li>
+            <li>
+              <input type="radio" name="typeOf" id="typeOf_3">
+              <label for="typeOf_3"><span>Горячие</span></label>
+            </li>
+            <li>
+              <input type="radio" name="typeOf" id="typeOf_4" disabled>
+              <label for="typeOf_4"><span>Молочные</span></label>
+            </li>
+            <li>
+              <input type="radio" name="typeOf" id="typeOf_5" disabled>
+              <label for="typeOf_5"><span>Десертные</span></label>
+            </li>
+            <li>
+              <input type="radio" name="typeOf" id="typeOf_6">
+              <label for="typeOf_6"><span>Слоистые</span></label>
+            </li>
+            <li>
+              <input type="radio" name="typeOf" id="typeOf_7" disabled>
+              <label for="typeOf_7"><span>Дейзи</span></label>
+            </li>
+            <li>
+              <input type="radio" name="typeOf" id="typeOf_8" disabled>
+              <label for="typeOf_8"><span>Джулепы</span></label>
+            </li>
+            <li>
+              <input type="radio" name="typeOf" id="typeOf_9">
+              <label for="typeOf_9"><span>Смеш</span></label>
+            </li>
+            <li>
+              <input type="radio" name="typeOf" id="typeOf_10">
+              <label for="typeOf_10"><span>Физы</span></label>
+            </li>
+            <li>
+              <input type="radio" name="typeOf" id="typeOf_11">
+              <label for="typeOf_11"><span>Сангари</span></label>
+            </li>
+            <li>
+              <input type="radio" name="typeOf" id="typeOf_12">
+              <label for="typeOf_12"><span>Кулеры</span></label>
+            </li>
+            <li>
+              <input type="radio" name="typeOf" id="typeOf_13" disabled>
+              <label for="typeOf_13"><span>Слинги</span></label>
+            </li>
+            <li>
+              <input type="radio" name="typeOf" id="typeOf_14">
+              <label for="typeOf_14"><span>Коблеры</span></label>
+            </li>
+            <li>
+              <input type="radio" name="typeOf" id="typeOf_15" disabled>
+              <label for="typeOf_15"><span>Кардинал</span></label>
+            </li>
+            <li>
+              <input type="radio" name="typeOf" id="typeOf_16">
+              <label for="typeOf_16"><span>Эг-Ног</span></label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mid-block third-block"> <!-- Третий верхний основной блок (блок с выбором крепости напитка) -->
+        <div class="upper-mid-b">
+          <p>Крепость</p>
+          <p class="up-mid-b-num"><span></span> вида</p>
+        </div>
+        <div class="choose-block strong-block">
+          <ul>
+            <li>
+              <input type="radio" name="strongOf" id="strongOf_1">
+              <label for="strongOf_1"><span>Безалкогольные</span></label>
+            </li>
+            <li>
+              <input type="radio" name="strongOf" id="strongOf_2">
+              <label for="strongOf_2"><span>Слабоградусные</span>
+                <p>6..15%</p>
+              </label>
+            </li>
+            <li>
+              <input type="radio" name="strongOf" id="strongOf_3">
+              <label for="strongOf_3"><span>Полукрепкие</span>
+                <p>16..22%</p>
+              </label>
+            </li>
+            <li>
+              <input type="radio" name="strongOf" id="strongOf_4">
+              <label for="strongOf_4"><span>Крепкие</span>
+                <p>23%</p>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mid-block fourth-block"> <!-- Четвёртый верхний основной блок (блок с выбором основы напитка) -->
+        <div class="upper-mid-b">
+          <p>Основа</p>
+          <p class="up-mid-b-num"><span></span> напитков</p>
+        </div>
+        <div class="scroll-pane core-block choose-block">
+          <ul>
+            <li>
+              <input type="radio" name="coreOf" id="coreOf_1" disabled>
+              <label for="coreOf_1"><span>Абсент</span></label>
+            </li>
+            <li>
+              <input type="radio" name="coreOf" id="coreOf_2" disabled>
+              <label for="coreOf_2"><span>Водка</span></label>
+            </li>
+            <li>
+              <input type="radio" name="coreOf" id="coreOf_3" disabled>
+              <label for="coreOf_3"><span>Джин</span></label>
+            </li>
+            <li>
+              <input type="radio" name="coreOf" id="coreOf_4" disabled>
+              <label for="coreOf_4"><span>Виски</span></label>
+            </li>
+            <li>
+              <input type="radio" name="coreOf" id="coreOf_5" disabled>
+              <label for="coreOf_5"><span>Бренди</span></label>
+            </li>
+            <li>
+              <input type="radio" name="coreOf" id="coreOf_6" disabled>
+              <label for="coreOf_6"><span>Ликер</span></label>
+            </li>
+            <li>
+              <input type="radio" name="coreOf" id="coreOf_7">
+              <label for="coreOf_7"><span>Кальвадос</span></label>
+            </li>
+            <li>
+              <input type="radio" name="coreOf" id="coreOf_8" disabled>
+              <label for="coreOf_8"><span>Текила</span></label>
+            </li>
+            <li>
+              <input type="radio" name="coreOf" id="coreOf_9">
+              <label for="coreOf_9"><span>Квас</span></label>
+            </li>
+            <li>
+              <input type="radio" name="coreOf" id="coreOf_10">
+              <label for="coreOf_10"><span>Вино</span></label>
+            </li>
+            <li>
+              <input type="radio" name="coreOf" id="coreOf_11" disabled>
+              <label for="coreOf_11"><span>Ром</span></label>
+            </li>
+            <li>
+              <input type="radio" name="coreOf" id="coreOf_12">
+              <label for="coreOf_12"><span>Пиво</span></label>
+            </li>
+            <li>
+              <input type="radio" name="coreOf" id="coreOf_13" disabled>
+              <label for="coreOf_13"><span>Сакэ</span></label>
+            </li>
+            <li>
+              <input type="radio" name="coreOf" id="coreOf_14" disabled>
+              <label for="coreOf_14"><span>Самогон</span></label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mid-block big-block"> <!-- Первый средний основной блок (блок с ингридиентами) -->
+        <div class="upper-mid-b upper-big-b">
+          <p>Ингридиенты</p>
+        </div>
+        <div class="scroll-pane inn-big-block">
+          <div class="inner-big-b">
+            <ul class="ingrid-list"></ul>
+            <input type="checkbox" id="add_ing">
+            <label for="add_ing">добавить ингридиент</label>
+            <div class="choose-ingird">
+              <input type="text" id="name_ing" placeholder="Название ингридиента">
+              <input type="number" id="num_ing" max="100" min="0" value="50">
+              <select id="type_size_ing">
+                <option>мл.</option>
+                <option>гр.</option>
+                <option>ст.л</option>
+                <option>кг.</option>
+              </select>
+              <a id="add_ing_form">добавить</a>
+              <label for="add_ing">отменить</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="papa-for-small-b"> <!-- Обёртка для малых блоков -->
+        <div class="mid-block small-block"> <!-- Первый средний маленький блок (блок с Порциями) -->
+          <input type="checkbox" id="porc_kol">
+          <div class="upper-mid-b upper-small-b">
+            <p>Порции</p>
+          </div>
+          <div class="center-mid-b">
+            <div class="range-block portion-block no-scroll">
+              <ul>
+                <li>
+                  <input type="radio" name="port" id="port_0">
+                  <label for="port_0">?<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="port" id="port_1">
+                  <label for="port_1"><span>1</span>
+                    <div></div>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="port" id="port_2" checked="checked">
+                  <label for="port_2"><span>2</span>
+                    <div></div>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="port" id="port_3">
+                  <label for="port_3"><span>3</span>
+                    <div></div>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="port" id="port_4">
+                  <label for="port_4"><span>4</span>
+                    <div></div>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="port" id="port_5">
+                  <label for="port_5"><span>5</span>
+                    <div></div>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="port" id="port_6">
+                  <label for="port_6"><span>6</span>
+                    <div></div>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="port" id="port_7">
+                  <label for="port_7"><span>7</span>
+                    <div></div>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="port" id="port_8">
+                  <label for="port_8"><span>8</span>
+                    <div></div>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="port" id="port_9">
+                  <label for="port_9"><span>9</span>
+                    <div></div>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="port" id="port_10">
+                  <label for="port_10"><span>10</span>
+                    <div></div>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="lower-mid-b">
+            <label for="porc_kol" class="box-style"><span>+2 порции</span></label>
+          </div>
+        </div>
+        <div class="mid-block small-block"> <!-- Второй средний маленький блок (блок времени) -->
+          <input type="checkbox" id="time_max">
+          <div class="upper-mid-b upper-small-b">
+            <p>Время <span>приготовления</span></p>
+          </div>
+          <div class="center-mid-b">
+            <div class="range-block time-c-block no-scroll">
+              <ul class="max-time">
+                <li>
+                  <input type="radio" name="time" id="time_m_0">
+                  <label for="time_m_0">?<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="time" id="time_m_1" checked="checked">
+                  <label for="time_m_1">10<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="time" id="time_m_2">
+                  <label for="time_m_2">15<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="time" id="time_m_3">
+                  <label for="time_m_3">20<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="time" id="time_m_4">
+                  <label for="time_m_4">30<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="time" id="time_m_5">
+                  <label for="time_m_5">45<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="time" id="time_m_6">
+                  <label for="time_m_6">60<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="time" id="time_m_7">
+                  <label for="time_m_7">90<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="time" id="time_m_8">
+                  <label for="time_m_8">120<div></div></label>
+                </li>
+              </ul>
+              <ul class="min-time">
+                <li>
+                  <input type="radio" name="time" id="time_0">
+                  <label for="time_0">1<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="time" id="time_1" checked="checked">
+                  <label for="time_1">2<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="time" id="time_2">
+                  <label for="time_2">3<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="time" id="time_3">
+                  <label for="time_3">4<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="time" id="time_4">
+                  <label for="time_4">5<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="time" id="time_5">
+                  <label for="time_5">6<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="time" id="time_6">
+                  <label for="time_6">7<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="time" id="time_7">
+                  <label for="time_7">8<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="time" id="time_8">
+                  <label for="time_8"><span>9</span>
+                    <div></div>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="lower-mid-b">
+            <label for="time_max" class="box-style"><span>Увеличенное время</span></label>
+          </div>
+        </div>
+        <div class="mid-block small-block"> <!-- Третий средний маленький блок (блок по сложности) -->
+          <div class="upper-mid-b upper-small-b">
+            <p>Сложность</p>
+          </div>
+          <div class="center-mid-b">
+            <div class="range-block hard-block no-scroll">
+              <ul>
+                <li>
+                  <input type="radio" name="complicated" id="complicated_0">
+                  <label for="complicated_0">0<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="complicated" id="complicated_1">
+                  <label for="complicated_1">1<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="complicated" id="complicated_2" checked="checked">
+                  <label for="complicated_2">2<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="complicated" id="complicated_3">
+                  <label for="complicated_3">3<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="complicated" id="complicated_4">
+                  <label for="complicated_4">4<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="complicated" id="complicated_5">
+                  <label for="complicated_5">5<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="complicated" id="complicated_6">
+                  <label for="complicated_6"><span>6</span>
+                    <div></div>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="complicated" id="complicated_7">
+                  <label for="complicated_7"><span>7</span>
+                    <div></div>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="complicated" id="complicated_8">
+                  <label for="complicated_8">8<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="complicated" id="complicated_9">
+                  <label for="complicated_9">9<div></div></label>
+                </li>
+                <li>
+                  <input type="radio" name="complicated" id="complicated_10">
+                  <label for="complicated_10">10<div></div></label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="lower-mid-b">
+            <input type="checkbox" id="categ_hard">
+            <label for="categ_hard" class="box-style"><span>вне категорий</span></label>
+          </div>
+        </div>
+        <div class="mid-block small-block met-b"> <!-- Четвёртый средний маленький блок (блок с методом) -->
+          <div class="upper-mid-b upper-small-b">
+            <p>Метод</p>
+            <p class="up-mid-b-num"><span></span> методов</p>
+          </div>
+          <div class="scroll-pane method-block choose-block">
+            <ul>
+              <li>
+                <input type="radio" name="methodOf" id="methodOf_1">
+                <label for="methodOf_1"><span>Не важно</span></label>
+              </li>
+              <li>
+                <input type="radio" name="methodOf" id="methodOf_2">
+                <label for="methodOf_2"><span>В шейкере</span></label>
+              </li>
+              <li>
+                <input type="radio" name="methodOf" id="methodOf_3">
+                <label for="methodOf_3"><span>В бокале</span></label>
+              </li>
+              <li>
+                <input type="radio" name="methodOf" id="methodOf_4">
+                <label for="methodOf_4"><span>В тазике</span></label>
+              </li>
+              <li>
+                <input type="radio" name="methodOf" id="methodOf_5">
+                <label for="methodOf_5"><span>В бочке</span></label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mid-block second-block jew-b"> <!-- Первый нижний блок (блок с украшениями) -->
+        <div class="upper-mid-b">
+          <p>Украшения</p>
+          <p class="up-mid-b-num"><span></span> видов</p>
+        </div>
+        <div class="scroll-wrap">
+          <div class="scroll-pane jewel-block choose-block">
+            <ul class="block-w-box">
+              <li>
+                <input type="checkbox" name="jewel" id="jewel_1">
+                <label for="jewel_1"><span>Без украшения</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="jewel" id="jewel_2">
+                <label for="jewel_2"><span>Долька апельсина</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="jewel" id="jewel_3">
+                <label for="jewel_3"><span>Взбитые сливки с клубникой</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="jewel" id="jewel_4">
+                <label for="jewel_4"><span>Долька мандарина на бокале</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="jewel" id="jewel_5">
+                <label for="jewel_5"><span>Виноградинка на шпажке</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="jewel" id="jewel_6">
+                <label for="jewel_6"><span>Долька киви на бокале</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="jewel" id="jewel_7">
+                <label for="jewel_7"><span>Вишенка на шпажке</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="jewel" id="jewel_8">
+                <label for="jewel_8"><span>Долька яблока на шпажке</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="jewel" id="jewel_9">
+                <label for="jewel_9"><span>Арбузинка на шпажке</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="jewel" id="jewel_10">
+                <label for="jewel_10"><span>Веточка мяты</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="jewel" id="jewel_11">
+                <label for="jewel_11"><span>Долька лимона на бокале</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="jewel" id="jewel_12">
+                <label for="jewel_12"><span>Долька лайма на бокале</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="jewel" id="jewel_13">
+                <label for="jewel_13"><span>Ломтик банана на шпажке</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="jewel" id="jewel_14">
+                <label for="jewel_14"><span>Взбитые сливки с вишней</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="jewel" id="jewel_15">
+                <label for="jewel_15"><span>Долька клубники на бокале</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="jewel" id="jewel_16">
+                <label for="jewel_16"><span>Апельсин на бокале</span></label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mid-block second-block tag-b"> <!-- Второй нижний блок (блок с тегами) -->
+        <div class="upper-mid-b">
+          <p>Теги</p>
+          <p class="up-mid-b-num"><span></span> видов</p>
+        </div>
+        <div class="scroll-wrap">
+          <div class="scroll-pane tag-block choose-block">
+            <ul class="block-w-box">
+              <li>
+                <input type="checkbox" name="tags" id="tags_1">
+                <label for="tags_1"><span>Бодрящие</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="tags" id="tags_2">
+                <label for="tags_2"><span>Горькие</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="tags" id="tags_3">
+                <label for="tags_3"><span>Сладкие</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="tags" id="tags_4">
+                <label for="tags_4"><span>Молочные</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="tags" id="tags_5">
+                <label for="tags_5"><span>Кислые</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="tags" id="tags_6">
+                <label for="tags_6"><span>Дисертные</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="tags" id="tags_7">
+                <label for="tags_7"><span>Солёные</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="tags" id="tags_8">
+                <label for="tags_8"><span>Необыч. по употреб.</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="tags" id="tags_9">
+                <label for="tags_9"><span>Тропические</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="tags" id="tags_10">
+                <label for="tags_10"><span>Фруктовые</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="tags" id="tags_11">
+                <label for="tags_11"><span>Травяные</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="tags" id="tags_12">
+                <label for="tags_12"><span>Освежающие</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="tags" id="tags_13">
+                <label for="tags_13"><span>Огненые</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="tags" id="tags_14">
+                <label for="tags_14"><span>Овощные</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="tags" id="tags_15">
+                <label for="tags_15"><span>Лонгдринксы</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="tags" id="tags_16">
+                <label for="tags_16"><span>Для девушек</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="tags" id="tags_17">
+                <label for="tags_17"><span>Для парней</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="tags" id="tags_18">
+                <label for="tags_18"><span>Для компаний</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="tags" id="tags_19">
+                <label for="tags_19"><span>Для друзей</span></label>
+              </li>
+              <li>
+                <input type="checkbox" name="tags" id="tags_20">
+                <label for="tags_20"><span>Для детей</span></label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mid-block big-block"> <!-- Третий нижний основной блок (блок с описанием) -->
+        <div class="upper-mid-b upper-big-b">
+          <p>Описание</p>
+        </div>
+        <div class="inner-big-b">
+          <input type="text" name="name_cocktail" placeholder="Название">
+          <input type="text" name="alt_name_cocktail" placeholder="Альтернативные названия через запятую">
+          <div>
+            <input type="radio" id="descp" name="text_area" checked="checked">
+            <label for="descp"><span>краткое описание</span></label>
+            <textarea name="descrip"></textarea>
+            <input type="radio" id="prep" name="text_area">
+            <label for="prep"><span>инструкция по приготовлению</span></label>
+            <textarea name="prepare"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="lower-block">
+        <input type="reset" value="очистить">
+        <input type="submit" value="сохранить">
+      </div>
+    </form>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

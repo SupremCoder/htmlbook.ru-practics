@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Сомелье</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Электронный сомелье</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    if ("document" in self) { if (!("classList" in document.createElement("_")) || document.createElementNS && !("classList" in document.createElementNS("http://www.w3.org/2000/svg", "g"))) { (function (t) { "use strict"; if (!("Element" in t)) return; var e = "classList", i = "prototype", n = t.Element[i], s = Object, r = String[i].trim || function () { return this.replace(/^\s+|\s+$/g, "") }, a = Array[i].indexOf || function (t) { var e = 0, i = this.length; for (; e < i; e++) { if (e in this && this[e] === t) { return e } } return -1 }, o = function (t, e) { this.name = t; this.code = DOMException[t]; this.message = e }, l = function (t, e) { if (e === "") { throw new o("SYNTAX_ERR", "An invalid or illegal string was specified") } if (/\s/.test(e)) { throw new o("INVALID_CHARACTER_ERR", "String contains an invalid character") } return a.call(t, e) }, c = function (t) { var e = r.call(t.getAttribute("class") || ""), i = e ? e.split(/\s+/) : [], n = 0, s = i.length; for (; n < s; n++) { this.push(i[n]) } this._updateClassName = function () { t.setAttribute("class", this.toString()) } }, u = c[i] = [], f = function () { return new c(this) }; o[i] = Error[i]; u.item = function (t) { return this[t] || null }; u.contains = function (t) { t += ""; return l(this, t) !== -1 }; u.add = function () { var t = arguments, e = 0, i = t.length, n, s = false; do { n = t[e] + ""; if (l(this, n) === -1) { this.push(n); s = true } } while (++e < i); if (s) { this._updateClassName() } }; u.remove = function () { var t = arguments, e = 0, i = t.length, n, s = false, r; do { n = t[e] + ""; r = l(this, n); while (r !== -1) { this.splice(r, 1); s = true; r = l(this, n) } } while (++e < i); if (s) { this._updateClassName() } }; u.toggle = function (t, e) { t += ""; var i = this.contains(t), n = i ? e !== true && "remove" : e !== false && "add"; if (n) { this[n](t) } if (e === true || e === false) { return e } else { return !i } }; u.toString = function () { return this.join(" ") }; if (s.defineProperty) { var h = { get: f, enumerable: true, configurable: true }; try { s.defineProperty(n, e, h) } catch (d) { if (d.number === -2146823252) { h.enumerable = false; s.defineProperty(n, e, h) } } } else if (s[i].__defineGetter__) { n.__defineGetter__(e, f) } })(self) } else { (function () { "use strict"; var t = document.createElement("_"); t.classList.add("c1", "c2"); if (!t.classList.contains("c2")) { var e = function (t) { var e = DOMTokenList.prototype[t]; DOMTokenList.prototype[t] = function (t) { var i, n = arguments.length; for (i = 0; i < n; i++) { t = arguments[i]; e.call(this, t) } } }; e("add"); e("remove") } t.classList.toggle("c3", false); if (t.classList.contains("c3")) { var i = DOMTokenList.prototype.toggle; DOMTokenList.prototype.toggle = function (t, e) { if (1 in arguments && !this.contains(t) === !e) { return e } else { return i.call(this, t) } } } t = null })() } }
+
+  </script>
+</head>
+
+<body>
+
+  <!-- Сверстайте форму из PSD-файла для ввода коктейля.
+    
+      Автор описания и дизайна — Александр Шпак.
+    
+      Как это работает?
+    
+      Выбор коктейля начинается с выбора бокала. От него зависят пункты меню в разделах «Тип», «Крепость», «Основа», как видим, часть из них становится неактивными в определенных случаях.
+    
+      Ингредиенты выполнены не в виде форм ввода, а таблицы. Это облегчает восприятие информации, хоть и требует немного больше телодвижений. Зато появляется возможность реализовать простую сортировку пунктов при помощи drag'n'drop и не ограничивать выбор пользователя только семью ингредиентами. Цветовое решение названий компонентов акцентирует внимание на украшениях.
+    
+      Время приготовления изменяет шкалу в зависимости от выбора чекбокса «увеличенное время».
+    
+      Описание намеренно перенесено в конец, чтобы минимизировать количество ошибок ввода данных, когда пользователь заполняет только первые пару элементов форм и нажимает на кнопку «сохранить».
+    
+      Размер формы намеренно сжат, чтобы она лучше помещалась на экран пользователя, что повышает удобство пользования.
+    
+      При заполнении данных об ингредиентах выбор названия и единиц измерения был заменен с нечитаемых списков на форму ввода с автоматическим поиском названия по шаблону. Это существенно ускоряет процесс заполнения формы за счёт отказа от более внимательного пролистывания опций. -->
+
+  <div class="container">
+    <div class="nBlock">
+      <div class="title blue">
+        <span class="titleInfo">Бокал</span><span class="titleExtra">18 видов
+        </span>
+      </div>
+      <div class="blockContent">
+        <div class="stemware" id="round">
+          <div class="viewport">
+            <div class="img" style="background:red;" title="Бокал виски"></div>
+            <div class="img hidden" style="background:green;" title="Кружка пива"></div>
+            <div class="img hidden" style="background:black;" title="Бокал для белого вина"></div>
+          </div>
+
+          <div class="stemware__leftArrow"></div>
+          <div class="stemware__rightArrow"></div>
+        </div>
+
+
+
+        <div class="stemware__name" id="stemware__name">Бокал для белого вина</div>
+      </div>
+      <script>
+
+        function round(obj) {
+          var elem = obj.elem,
+            name = obj.name,
+            leftArrow = obj.leftArrow,
+            rightArrow = obj.rightArrow;
+          var viewport = elem.querySelector('.viewport');
+          var images = viewport.getElementsByTagName('*');
+          var end = images.length;
+          var currentImage;
+
+          for (var i = 0; i < images.length; i++) {
+            if (!images[i].classList.contains('hidden')) {
+              currentImage = i;
+              name.innerHTML = images[currentImage].title;
+              break;
+            }
+
+          }
+
+          rightArrow.onclick = function (event) {
+            currentImage++;
+            if (currentImage < end) {
+              images[currentImage].classList.remove('hidden');
+              images[currentImage - 1].classList.add('hidden');
+            } else {
+              currentImage = 0;
+              images[currentImage].classList.remove('hidden');
+              images[end - 1].classList.add('hidden');
+
+            }
+            name.innerHTML = images[currentImage].title;
+          }
+
+
+          leftArrow.onclick = function (event) {
+            currentImage--;
+            if (currentImage >= 0) {
+              images[currentImage].classList.remove('hidden');
+              images[currentImage + 1].classList.add('hidden');
+            } else {
+              currentImage = end - 1;
+              images[currentImage].classList.remove('hidden');
+              images[0].classList.add('hidden');
+
+            }
+
+            name.innerHTML = images[currentImage].title;
+          }
+
+
+        }
+
+
+        round({
+          elem: document.getElementById('round'),
+          name: document.getElementById('stemware__name'),
+          leftArrow: document.querySelector('.stemware__leftArrow'),
+          rightArrow: document.querySelector('.stemware__rightArrow')
+        });
+
+      </script>
+    </div>
+    <div class="nBlock ">
+      <div class="title blue">
+        <span class="titleInfo">Тип</span><span class="titleExtra">24 типа</span>
+      </div>
+      <div class="blockContent type">
+        <ul id="toScroll2">
+          <li>Аперитивы</li>
+          <li class="selected">Диджестивы</li>
+          <li>Горячие</li>
+          <li class="notInStock">Молочные</li>
+          <li class="notInStock">Десертные</li>
+          <li>Слоистые</li>
+          <li class="notInStock">Дейзи</li>
+          <li class="notInStock">Джулепы</li>
+          <li>Аперитивы</li>
+          <li class="">Диджестивы</li>
+          <li>Горячие</li>
+          <li class="notInStock">Молочные</li>
+          <li class="notInStock">Десертные</li>
+          <li>Слоистые</li>
+          <li class="notInStock">Дейзи</li>
+          <li class="notInStock">Джулепы</li>
+          <li class="notInStock">Джулепы</li>
+        </ul>
+      </div>
+      <div class="scroll" id="scroll2">
+        <div class="upArrow inactive"></div>
+        <div class="downArrow"></div>
+        <div class="scroller"></div>
+      </div>
+    </div>
+    <div class="nBlock">
+      <div class="title blue">
+        <span class="titleInfo">Крепость</span><span class="titleExtra">4 вида</span>
+      </div>
+      <div class="blockContent">
+        <ul class="drinkStrength">
+          <li>Безалкогольные<span class="degree"></span></li>
+          <li>Слабоградусные<span class="degree">6..15%</span></li>
+          <li>Полукрепкие<span class="degree">16..22%</span></li>
+          <li class="selected">Крепкие<span class="degree">23%</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="nBlock last">
+      <div class="title blue">
+        <span class="titleInfo">Основа</span><span class="titleExtra">14 напитков</span>
+      </div>
+      <div class="blockContent">
+        <ul id="toScroll3">
+          <li>Абсент</li>
+          <li>Водка</li>
+          <li>Джин</li>
+          <li>Виски</li>
+          <li class="selected">Бренди</li>
+          <li>Ликер</li>
+          <li>Кальвадос</li>
+          <li>Текила</li>
+          <li>Абсент</li>
+          <li>Водка</li>
+          <li>Джин</li>
+          <li>Виски</li>
+        </ul>
+      </div>
+      <div class="scroll" id="scroll3">
+        <div class="upArrow inactive"></div>
+        <div class="downArrow"></div>
+        <div class="scroller"></div>
+      </div>
+    </div>
+    <div class="wBlock">
+      <div class="title lightBlue">
+        <span class="titleInfo">Ингредиенты</span>
+      </div>
+      <div class="blockContent ingredients">
+        <ul>
+          <li>Настройка "Рябиновая на коньяке"<span>1 <span class="measure">ст.л</span></span></li>
+          <li>Бренди<span>100 <span class="measure">мл</span></span></li>
+          <li>Коктейльная вишня<span>1 <span class="measure">шт.</span></span></li>
+
+        </ul>
+        <div class="addIngredient"><span>Добавить ингредиент</span></div>
+      </div>
+    </div>
+    <div class="nBlock">
+      <div class="nBlock mini">
+        <div class="title purple">
+          <span class="titleInfo">Порции</span><span class="titleExtra">14 напитков</span>
+        </div>
+        <div class="blockContent">
+          <ul id="items7">
+            <li><span>?</span></li>
+            <li><span>1</span></li>
+            <li><span>2</span></li>
+            <li><span>3</span></li>
+            <li class="active"><span>4</span>
+              <div class="before" id="scroller7"></div>
+            </li>
+            <li><span>5</span></li>
+            <li><span>6</span></li>
+            <li><span>7</span></li>
+            <li><span>8</span></li>
+            <li><span>9</span></li>
+            <li><span>10</span></li>
+            <li class="line grey" id="scroll7">
+            </li>
+          </ul>
+          <div class="mini__additional">
+            <div class="mini__additional__select">
+            </div> <span>+2 порции</span>
+          </div>
+        </div>
+      </div>
+      <div class="nBlock mini">
+        <div class="title purple">
+          <span class="titleInfo">Cложность</span>
+        </div>
+        <div class="blockContent">
+          <ul id="items9">
+            <li><span>0</span></li>
+            <li><span>1</span></li>
+            <li><span>2</span></li>
+            <li><span>3</span></li>
+            <li class="active"><span>4</span>
+              <div class="before" id="scroller9"></div>
+            </li>
+            <li><span>5</span></li>
+            <li><span>6</span></li>
+            <li><span>7</span></li>
+            <li><span>8</span></li>
+            <li><span>9</span></li>
+            <li><span>10</span></li>
+            <li class="line colored" id="scroll9"></li>
+          </ul>
+          <div class="mini__additional">
+            <div class="mini__additional__select selected">
+            </div> <span>вне категорий</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nBlock last">
+      <div class="nBlock mini">
+        <div class="title purple">
+          <span class="titleInfo">Время<span style="font-size:16px;"> приготовления</span></span>
+        </div>
+        <div class="blockContent">
+          <ul class="preparationTime" id="items8">
+            <li><span>?</span></li>
+            <li><span>10</span></li>
+            <li><span>15</span></li>
+            <li><span>20</span></li>
+            <li class="active"><span>30</span>
+              <div class="before" id="scroller8"></div>
+            </li>
+            <li><span>45</span></li>
+            <li><span>60</span></li>
+            <li><span>90</span></li>
+            <li><span>120</span></li>
+
+            <li class="line grey" id="scroll8"></li>
+          </ul>
+          <div class="mini__additional">
+            <div class="mini__additional__select selected">
+            </div> <span>увеличенное время</span>
+          </div>
+        </div>
+      </div>
+      <div class="nBlock mini last">
+        <div class="title purple">
+          <span class="titleInfo">Метод</span><span class="titleExtra">5 методов</span>
+        </div>
+        <div class="blockContent">
+          <ul class="method" id="toScroll6">
+            <li>Не важно</li>
+            <li class="selected">В шейкере</li>
+            <li>Не важно</li>
+            <li class="">В шейкере</li>
+          </ul>
+        </div>
+        <div class="scroll" id="scroll6">
+          <div class="upArrow inactive"></div>
+          <div class="downArrow"></div>
+          <div class="scroller" style="height:20px;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="nBlock">
+      <div class="title blue">
+        <span class="titleInfo">Украшения</span><span class="titleExtra">19 видов</span>
+      </div>
+      <div class="blockContent">
+        <div class="selects" id="toScroll4">
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Апельсин на бокале</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Веточка мяты</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Взбитые сливки с вишней</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select selected">
+            </div> <span>Виноград на шпажке</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Вишенка на шпажке</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Долька мандарина</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Кисточка винограда</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Апельсин на бокале</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Веточка мяты</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Взбитые сливки с вишней</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Виноград на шпажке</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Вишенка на шпажке</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Долька мандарина</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Кисточка винограда</span>
+          </div>
+        </div>
+      </div>
+      <div class="scroll" id="scroll4">
+        <div class="upArrow inactive"></div>
+        <div class="downArrow"></div>
+        <div class="scroller"></div>
+      </div>
+    </div>
+    <div class="nBlock">
+      <div class="title blue">
+        <span class="titleInfo">Теги</span><span class="titleExtra">21 тег</span>
+      </div>
+      <div class="blockContent">
+        <div class="selects" id="toScroll5">
+
+          <div class="select">
+            <div class="mini__additional__select selected">
+            </div> <span>Овощные</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Огненные</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Освежающие</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Пикантные</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Пунш</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>С мороженым</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Сладкие</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Солёные</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Овощные</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Огненные</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Освежающие</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Пикантные</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Пунш</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select ">
+            </div> <span>С мороженым</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Сладкие</span>
+          </div>
+          <div class="select">
+            <div class="mini__additional__select">
+            </div> <span>Солёные</span>
+          </div>
+
+        </div>
+      </div>
+      <div class="scroll" id="scroll5">
+        <div class="upArrow inactive"></div>
+        <div class="downArrow"></div>
+        <div class="scroller"></div>
+      </div>
+    </div>
+    <div class="wBlock description last">
+      <div class="title lightBlue">
+        <span class="titleInfo">Описание</span>
+      </div>
+      <div class="blockContent">
+        <form id="description">
+          <input type="text" placeholder="Название">
+          <input type="text" placeholder="Альтернативные названия через запятую">
+          <div class="textarea__title active"><span>краткое описание</span></div>
+          <div class="textarea__instruction"><span>инструкция по приготовлению</span></div>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <textarea name="" id="" cols="30" rows="10" class="hidden"></textarea>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="buttons">
+    <div class="cleanButton">Очистить</div>
+    <div class="saveButton">Сохранить</div>
+  </div>
+
+
+
+  <script>
+
+    (function () {
+
+      function select(event, ul) {
+        var selected = ul.querySelector('.selected');
+
+        var target = event.target;
+
+        while (target) {
+
+          if (target.tagName == 'LI') {
+            break;
+          }
+          target = target.parentNode;
+
+        }
+
+        if (!target) {
+          return;
+        }
+
+        if (target.classList.contains('notInStock')) {
+          return;
+        }
+
+        selected.classList.remove('selected');
+        target.classList.add('selected');
+
+      }
+
+      var drinkStrength = document.querySelector('.drinkStrength');
+
+      drinkStrength.onclick = function (event) {
+        select(event, this);
+      }
+
+
+
+
+
+
+      function createScroll(elem, toScroll) {
+        var scroller = elem.querySelector('.scroller');
+        var contentBlock = elem.previousElementSibling;
+        var contentHeight = contentBlock.offsetHeight;
+        var ul = contentBlock.querySelector('ul');
+
+        var scrollHeight = elem.offsetHeight;
+        if (contentHeight > toScroll.offsetHeight) {
+          elem.parentNode.removeChild(elem);
+          return;
+        }
+
+
+
+
+        if (ul) {
+          ul.onclick = function (event) {
+            select(event, ul);
+          }
+          var ulHeight = ul.offsetHeight;
+          scroller.style.height = (scrollHeight - 30) * (contentHeight / ulHeight) + 'px';
+        }
+
+        var selects = contentBlock.querySelector('.selects');
+
+        if (selects) {
+          selects.onclick = function (event) {
+            var target = event.target;
+            while (target) {
+
+              if (target.className == 'select') {
+                break;
+              }
+              target = target.parentNode;
+
+            }
+            if (target) {
+
+
+              target.children[0].classList.toggle('selected');
+
+            }
+
+          }
+        }
+
+
+
+        toScroll.onmousedown = function () {
+          return false;
+        }
+
+
+        var upArrow = elem.querySelector('.upArrow');
+        var downArrow = elem.querySelector('.downArrow');
+
+
+
+        function moveAt(event, plus) {
+
+          var target = scroller;
+          var scrollCoords = elem.getBoundingClientRect();
+          var scrollerHeight = target.offsetHeight;
+          var scrollerCoords = target.getBoundingClientRect();
+
+          var max = scrollHeight - scrollerHeight - arrowHeight;
+
+          var scrollerCoords = target.getBoundingClientRect();
+          var top = scrollerCoords.top - scrollCoords.top;
+          top += plus;
+          if (top <= 10) {
+            top = 10;
+            upArrow.classList.add('inactive');
+            downArrow.classList.remove('inactive');
+          } else if (top >= max) {
+            downArrow.classList.add('inactive');
+            upArrow.classList.remove('inactive');
+            top = max;
+          } else {
+            upArrow.classList.remove('inactive');
+            downArrow.classList.remove('inactive');
+          }
+
+          var toScrollBottom = contentHeight - toScroll.offsetHeight;
+          if (toScrollBottom < 0) {
+            toScrollBottom -= 15;
+            var percent = (top - 10) / (max - 10);
+            toScroll.style.marginTop = (toScrollBottom * percent) + 'px';
+          }
+
+
+
+          target.style.top = top + 'px';
+        }
+
+        upArrow.onclick = function (event) {
+          moveAt(event, -30);
+        }
+
+
+        downArrow.onclick = function (event) {
+          moveAt(event, 30);
+        }
+
+        contentBlock.onwheel = function (event) {
+          event.preventDefault();
+          var plus = 0;
+          if (event.deltaY > 0) {
+            plus = event.deltaY - 40;
+          } else {
+            plus = event.deltaY + 40;
+          }
+
+
+          moveAt(event, plus);
+        }
+
+
+        var arrowHeight = upArrow.offsetHeight;
+        toScroll.onmousedown = function () {
+          return false;
+        }
+
+        scroller.ondragstart = function () {
+          return false;
+        }
+
+        elem.onmousedown = function (event) {
+
+          var coords = scroller.getBoundingClientRect();
+          if (event.target.className != 'scroll') {
+            return;
+          }
+          var top = window.pageYOffset || document.documentElement.scrollTop;
+
+          if (coords.bottom + top < event.pageY) {
+            moveAt(event, 40);
+          }
+          else {
+            moveAt(event, -40);
+          }
+
+        }
+
+
+        scroller.onmousedown = function (event) {
+          var target = event.target;
+          var scrollCoords = elem.getBoundingClientRect();
+          var scrollerHeight = target.offsetHeight;
+          var scrollerCoords = target.getBoundingClientRect();
+          var shiftY = event.pageY - scrollerCoords.top;
+          var max = scrollHeight - scrollerHeight - arrowHeight;
+
+
+          moveAt(event);
+
+          function moveAt(event) {
+
+            var scrollerCoords = target.getBoundingClientRect();
+            var top = event.pageY - scrollCoords.top - shiftY;
+            if (top <= 10) {
+              top = 10;
+              upArrow.classList.add('inactive');
+              downArrow.classList.remove('inactive');
+            } else if (top >= max) {
+              downArrow.classList.add('inactive');
+              upArrow.classList.remove('inactive');
+              top = max;
+            } else {
+              upArrow.classList.remove('inactive');
+              downArrow.classList.remove('inactive');
+            }
+
+            var toScrollBottom = contentHeight - toScroll.offsetHeight;
+            if (toScrollBottom < 0) {
+              toScrollBottom -= 15;
+              var percent = (top - 10) / (max - 10);
+              toScroll.style.marginTop = (toScrollBottom * percent) + 'px';
+            }
+
+
+
+            target.style.top = top + 'px';
+          }
+
+          document.onmousemove = function (event) {
+            moveAt(event);
+          }
+
+          document.onmouseup = function (event) {
+            moveAt(event);
+            document.onmousemove = document.onmouseup = null;
+
+          }
+
+
+        }
+
+      }
+
+
+      createScroll(document.getElementById('scroll2'), document.getElementById('toScroll2'));
+      createScroll(document.getElementById('scroll3'), document.getElementById('toScroll3'));
+      createScroll(document.getElementById('scroll4'), document.getElementById('toScroll4'));
+      createScroll(document.getElementById('scroll5'), document.getElementById('toScroll5'));
+      createScroll(document.getElementById('scroll6'), document.getElementById('toScroll6'));
+
+
+
+
+      function createXScroll(elem, scroller, items) {
+
+        var itemsCount = items.children.length - 1;
+
+        items.onclick = function (event) {
+          var target;
+          if (event.target.tagName == 'SPAN') {
+            target = event.target.parentNode;
+          } else if (event.target.tagName == 'LI') {
+            target = event.target;
+          } else {
+            return;
+          }
+
+          if (target.classList.contains('line')) {
+            return;
+          }
+
+          var prev = items.querySelector('.active');
+
+          var before = prev.removeChild(prev.querySelector('.before'));
+          prev.classList.remove('active');
+          target.classList.add('active');
+          target.appendChild(before);
+        }
+
+
+        var scrollWidth = elem.offsetWidth;
+
+        var num = scrollWidth / itemsCount;
+
+
+
+        scroller.onmousedown = function () {
+          return false;
+        }
+
+        scroller.ondragstart = function () {
+          return false;
+        }
+
+        scroller.onmousedown = function (event) {
+          var target = event.target;
+          var scrollCoords = elem.getBoundingClientRect();
+          var max = Math.round(scrollWidth / num);
+
+          moveAt(event);
+
+          function moveAt(event) {
+
+            var scrollerCoords = target.getBoundingClientRect();
+            var left = window.pageXOffset || document.documentElement.scrollLeft;
+
+
+            var top = Math.ceil((event.pageX - (scrollCoords.left + left)) / num);
+            if (top <= 1) {
+              top = 1;
+            } else if (top >= max) {
+              top = max;
+            }
+
+            var prev = items.querySelector('.active');
+
+            var before = prev.removeChild(prev.querySelector('.before'));
+            prev.classList.remove('active');
+
+
+            items.children[top - 1].appendChild(before);
+            items.children[top - 1].classList.add('active');
+          }
+
+          document.onmousemove = function (event) {
+            moveAt(event);
+          }
+
+          document.onmouseup = function (event) {
+
+            document.onmousemove = document.onmouseup = null;
+
+          }
+
+
+        }
+
+      }
+
+
+      createXScroll(document.getElementById('scroll7'), document.getElementById('scroller7'), document.getElementById('items7'));
+      createXScroll(document.getElementById('scroll8'), document.getElementById('scroller8'), document.getElementById('items8'));
+      createXScroll(document.getElementById('scroll9'), document.getElementById('scroller9'), document.getElementById('items9'));
+
+
+      var miniBlocks = document.querySelectorAll('.mini.nBlock');
+
+      for (var i = 0; i < miniBlocks.length; i++) {
+        miniBlocks[i].onclick = function (event) {
+          var target = event.target;
+          while (target) {
+
+            if (target.className == 'mini__additional') {
+              break;
+            }
+            target = target.parentNode;
+
+          }
+          if (target) {
+
+
+            target.children[0].classList.toggle('selected');
+
+          }
+
+        }
+      }
+
+
+      var form = document.getElementById('description');
+
+
+
+      form.onclick = function (event) {
+        var textareas = form.querySelectorAll('textarea');
+
+
+
+        var target = event.target;
+
+
+
+        while (target != document) {
+
+          if (target.classList.contains('textarea__instruction') ||
+            target.classList.contains('textarea__title')) {
+            break;
+          }
+          target = target.parentNode;
+
+        }
+
+
+        if (target == document) {
+          return;
+        }
+
+        if (target) {
+          var active = form.querySelector('.active');
+          active.classList.remove('active');
+          target.classList.add('active');
+
+          if (target.classList.contains('textarea__instruction')) {
+
+            textareas[0].classList.add('hidden');
+            textareas[1].classList.remove('hidden');
+          }
+
+          if (target.classList.contains('textarea__title')) {
+
+            textareas[0].classList.remove('hidden');
+            textareas[1].classList.add('hidden');
+          }
+
+
+        }
+
+
+
+      }
+
+    })()
+  </script>
+</body>
+
+</html>
