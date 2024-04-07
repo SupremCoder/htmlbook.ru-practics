@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма для коктейлей</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans&subset=cyrillic">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Сверстайте форму из PSD-файла для ввода коктейля. -->
+  <!-- В процессе работы учтите следующие условия.
+  Разрешается использовать JavaScript, а также любые библиотеки и фреймворки.
+  Валидная вёрстка на HTML5.
+  Валидность CSS не важна.
+  Корректное отображение в браузерах IE9, Opera 11.10, Firefox 5, Safari 5, Chrome 12 и их старших версиях.
+  Работоспособность формы в IE8.
+  Допустимы незначительные отклонения от макета при отображении в разных браузерах. -->
+
+  <form action="" method="post">
+    <fieldset class="set_one">
+      <legend>Описание</legend>
+      <div class="logo">
+        <img src="https://akorol777.github.io/cocktail/img/logo-text.png" class="logo-text" alt="Слоган">
+        <img src="https://akorol777.github.io/cocktail/img/logo-drink.png" class="logo-drink" alt="Логотип">
+      </div>
+
+      <label for="cocktail_name">
+        <p>Название коктейля:</p>
+      </label>
+      <input type="text" id="cocktail_name" name="cocktail_name">
+
+      <label for="alt_name">
+        <p>Альтернативные названия (через запятую):</p>
+      </label>
+      <input type="text" id="alt_name" name="alt_name">
+
+      <label for="description">
+        <p>Краткое описание:</p>
+      </label>
+      <textarea rows="10" cols="50" name="description"></textarea>
+
+      <label for="instruction">
+        <p>Инструкция для приготовления:</p>
+      </label>
+      <textarea rows="10" cols="50" name="instruction"></textarea>
+
+
+
+    </fieldset>
+
+    <fieldset class="set_two">
+      <legend class="legend_two">Ингредиенты</legend>
+
+      <div class="names">
+        <ul>
+          <li><label for="names">Название:</label></li>
+
+          <li><select name="names">
+              <option value="one" selected>Bitter Lemon</option>
+              <option value="two">Настойка &laquo;Лимонная&raquo;</option>
+              <option value="three">Ред булл</option>
+              <option value="four">Лимончелло</option>
+              <option value="five">Ликер Малибу</option>
+              <option value="six">Нет</option>
+            </select>
+          </li>
+
+          <li><select name="names">
+              <option value="one">Bitter Lemon</option>
+              <option value="two" selected>Настойка &laquo;Лимонная&raquo;</option>
+              <option value="three">Ред булл</option>
+              <option value="four">Лимончелло</option>
+              <option value="five">Ликер Малибу</option>
+              <option value="six">Нет</option>
+            </select>
+          </li>
+
+          <li><select name="names">
+              <option value="one">Bitter Lemon</option>
+              <option value="two">Настойка &laquo;Лимонная&raquo;</option>
+              <option value="three">Ред булл</option>
+              <option value="four">Лимончелло</option>
+              <option value="five">Ликер Малибу</option>
+              <option value="six" selected>Нет</option>
+            </select>
+          </li>
+
+          <li><select name="names">
+              <option value="one">Bitter Lemon</option>
+              <option value="two">Настойка &laquo;Лимонная&raquo;</option>
+              <option value="three">Ред булл</option>
+              <option value="four">Лимончелло</option>
+              <option value="five">Ликер Малибу</option>
+              <option value="six" selected>Нет</option>
+            </select>
+          </li>
+
+          <li><select name="names">
+              <option value="one">Bitter Lemon</option>
+              <option value="two">Настойка &laquo;Лимонная&raquo;</option>
+              <option value="three">Ред булл</option>
+              <option value="four">Лимончелло</option>
+              <option value="five">Ликер Малибу</option>
+              <option value="six" selected>Нет</option>
+            </select>
+          </li>
+
+          <li><select name="names">
+              <option value="one">Bitter Lemon</option>
+              <option value="two">Настойка &laquo;Лимонная&raquo;</option>
+              <option value="three">Ред булл</option>
+              <option value="four">Лимончелло</option>
+              <option value="five">Ликер Малибу</option>
+              <option value="six" selected>Нет</option>
+            </select>
+          </li>
+
+          <li><select name="names">
+              <option value="one">Bitter Lemon</option>
+              <option value="two">Настойка &laquo;Лимонная&raquo;</option>
+              <option value="three">Ред булл</option>
+              <option value="four">Лимончелло</option>
+              <option value="five">Ликер Малибу</option>
+              <option value="six" selected>Нет</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+
+      <div class="quantity">
+        <ul>
+          <li><label for="quantity">Кол-во:</label></li>
+          <li><input type="text" name="quantity" pattern="[1-9]{6}" placeholder="1"></li>
+          <li><input type="text" name="quantity" pattern="[1-9]{6}" placeholder="50"></li>
+          <li><input type="text" name="quantity" pattern="[1-9]{6}" placeholder="-"></li>
+          <li><input type="text" name="quantity" pattern="[1-9]{6}" placeholder="-"></li>
+          <li><input type="text" name="quantity" pattern="[1-9]{6}" placeholder="-"></li>
+          <li><input type="text" name="quantity" pattern="[1-9]{6}" placeholder="-"></li>
+          <li><input type="text" name="quantity" pattern="[1-9]{6}" placeholder="-">
+          </li>
+        </ul>
+      </div>
+
+      <div class="units">
+        <ul>
+          <li><label for="units">Единица:</label></li>
+
+          <li><select name="units">
+              <option value="one" selected>Стакан</option>
+              <option value="two">мл.</option>
+              <option value="three">Ложка</option>
+              <option value="four">Литр</option>
+              <option value="five">-</option>
+            </select></li>
+
+          <li><select name="units">
+              <option value="one">Стакан</option>
+              <option value="two" selected>мл.</option>
+              <option value="three">Ложка</option>
+              <option value="four">Литр</option>
+              <option value="five">-</option>
+            </select></li>
+
+          <li><select name="units">
+              <option value="one">Стакан</option>
+              <option value="two">мл.</option>
+              <option value="three">Ложка</option>
+              <option value="four">Литр</option>
+              <option value="five" selected>-</option>
+            </select></li>
+
+          <li><select name="units">
+              <option value="one">Стакан</option>
+              <option value="two">мл.</option>
+              <option value="three">Ложка</option>
+              <option value="four">Литр</option>
+              <option value="five" selected>-</option>
+            </select></li>
+
+          <li><select name="units">
+              <option value="one">Стакан</option>
+              <option value="two">мл.</option>
+              <option value="three">Ложка</option>
+              <option value="four">Литр</option>
+              <option value="five" selected>-</option>
+            </select></li>
+
+          <li><select name="units">
+              <option value="one">Стакан</option>
+              <option value="two">мл.</option>
+              <option value="three">Ложка</option>
+              <option value="four">Литр</option>
+              <option value="five" selected>-</option>
+            </select></li>
+
+          <li><select name="units">
+              <option value="one">Стакан</option>
+              <option value="two">мл.</option>
+              <option value="three">Ложка</option>
+              <option value="four">Литр</option>
+              <option value="five" selected>-</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+
+      <div class="decorations">
+        <ul>
+          <li><label for="decorations">Украшения:</label></li>
+          <li><input type="checkbox"></li>
+          <li><input type="checkbox"></li>
+          <li><input type="checkbox" checked></li>
+          <li><input type="checkbox"></li>
+          <li><input type="checkbox"></li>
+          <li><input type="checkbox"></li>
+          <li><input type="checkbox"></li>
+        </ul>
+      </div>
+      <div class="sets_end"></div>
+
+    </fieldset>
+
+    <fieldset class="set_three">
+      <legend class="legend_three">Параметры</legend>
+
+      <ul>
+        <li><label for="set_three1">Количество порций:</label></li>
+        <li><select name="portions" id="set_three1">
+            <option value="one">1 порция</option>
+            <option value="two">2 порции</option>
+            <option value="three" selected>3 порции</option>
+            <option value="four">4 порции</option>
+            <option value="five">5 порций</option>
+          </select>
+        </li>
+
+        <li><label for="set_three2">Время приготовления:</label></li>
+        <li><select name="time" id="set_three2">
+            <option value="one">1 минута</option>
+            <option value="two">2 минуты</option>
+            <option value="three">3 минуты</option>
+            <option value="four" selected>4 минуты</option>
+            <option value="five">5 минут</option>
+          </select></li>
+
+        <li><label for="set_three3">Сложность приготовления:</label></li>
+        <li><select name="complexity" id="set_three3">
+            <option value="one">Очень-очень низкая (1 балл)</option>
+            <option value="two">Очень низкая (2 балла)</option>
+            <option value="three">Низкая (3 балла)</option>
+            <option value="four">Уже не низкая (4 балла)</option>
+            <option value="five">Почти средняя (5 баллов)</option>
+            <option value="six" selected>Средняя (6 баллов)</option>
+            <option value="seven">Скоро будет высокая (7 баллов)</option>
+            <option value="eight">Теперь высокая (8 баллов)</option>
+            <option value="nine">Высокая-высокая (9 баллов)</option>
+            <option value="ten">Бармен 80 lvl (10 баллов)</option>
+          </select>
+        </li>
+
+        <li><label for="set_three4">Метод приготовления:</label></li>
+        <li><select name="method">
+            <option value="one" selected id="set_three4">В бокале</option>
+            <option value="two">Шейк-шейк-шейк</option>
+            <option value="three">В бутылке</option>
+            <option value="four">В тарелке</option>
+            <option value="five">Как пойдет</option>
+          </select></li>
+      </ul>
+
+    </fieldset>
+
+    <fieldset class="set_four">
+      <ul>
+        <li>
+          <div class="photograph">Фотография:</div>
+        </li>
+        <li><img src="http://illusii.esy.es/bokal2.png" alt="Коктейль" class="foto_coc"></li>
+        <li><a href="#">Щелкните, чтобы посмотреть в полный размер</a> <span>
+            .........................................................................................................</span>
+        </li>
+        <li><button>Загрузить фото</button></li>
+      </ul>
+    </fieldset>
+
+    <div class="chapter one">ТИП КОКТЕЙЛЯ</div>
+    <div class="flag">По крепости:</div>
+    <fieldset class="set_five">
+      <input type="radio" id="set_five1"><label for="set_five1">Безалкогольные</label>
+      <input type="radio" id="set_five2"><label for="set_five2">Слабоалкогольные (6-15%)</label>
+      <input type="radio" checked id="set_five3"><label for="set_five3">Полукрепкие (16-22%)</label>
+      <input type="radio" id="set_five4"><label for="set_five4">Крепкие (более 22%)</label>
+      <div class="circle one"></div>
+      <div class="circle two"></div>
+      <div class="circle three"></div>
+      <div class="circle four"></div>
+    </fieldset>
+
+    <div class="flag_two">На основе:</div>
+    <fieldset class="set_six">
+      <label for="set_six1">Абсента</label><input type="radio" id="set_six1">
+      <label for="set_six2">Водки<input type="radio" id="set_six2"></label>
+      <label for="set_six3">Джина<input type="radio" id="set_six3"></label>
+      <label for="set_six4">Виски<input type="radio" id="set_six4"></label>
+      <label for="set_six5">Бренди<input type="radio" id="set_six5"></label>
+      <label for="set_six6">Ликера<input type="radio" checked id="set_six6"></label>
+      <label for="set_six7">Кальвадоса<input type="radio" id="set_six7"></label>
+      <label for="set_six8">Текилы<input type="radio" id="set_six8"></label>
+      <label for="set_six9">Рома<input type="radio" id="set_six9"></label>
+      <label for="set_six10">Вина<input type="radio" id="set_six10"></label>
+      <label for="set_six11">Пива<input type="radio" id="set_six11"></label>
+
+      <div class="range">
+        <div class="arrow_left"></div><input type="range" min="0" max="100" step="1" value="50">
+        <div class="arrow_right"></div>
+      </div>
+      <div class="show_list"><a href="#">Показать списком</a></div>
+
+    </fieldset>
+
+    <div class="flag_three">По типу:</div>
+    <fieldset class="set_seven">
+      <label for="set_seven1">Аперетивы<input type="radio" id="set_seven1"></label>
+      <label for="set_seven2">Диджестивы<input type="radio" id="set_seven2"></label>
+      <label for="set_seven3">Горячие<input type="radio" id="set_seven3"></label>
+      <label for="set_seven4">Молочные<input type="radio" id="set_seven4"></label>
+      <label for="set_seven5">Десертные<input type="radio" id="set_seven5"></label>
+      <label for="set_seven6">Слоистые<input type="radio" id="set_seven6"></label>
+      <label for="set_seven7">Дейзи<input type="radio" id="set_seven7"></label>
+      <label for="set_seven8">Джулепы<input type="radio" checked id="set_seven8"></label>
+      <label for="set_seven9">Кардиналы<input type="radio" id="set_seven9"></label>
+      <label for="set_seven10">Коблеры<input type="radio" id="set_seven10"></label>
+      <label for="set_seven11">Коллинзы<input type="radio" id="set_seven11"></label>
+
+      <div class="range">
+        <div class="arrow_left"></div><input type="range" min="0" max="100" step="1" value="50">
+        <div class="arrow_right"></div>
+      </div>
+      <div class="show_list"><a href="#">Показать списком</a></div>
+
+    </fieldset>
+
+    <div class="chapter two">ТЕГИ</div>
+    <fieldset class="set_eight">
+      <label for="set_eight1">Бодрящие<input type="checkbox" id="set_eight1"></label>
+      <label for="set_eight2">Горькие<input type="checkbox" id="set_eight2"></label>
+      <label for="set_eight3">Для компании<input type="checkbox" checked id="set_eight3"></label>
+      <label for="set_eight4">Кислые<input type="checkbox" id="set_eight4"></label>
+      <label for="set_eight5">Лонгдринк<input type="checkbox" id="set_eight5"></label>
+      <label for="set_eight6">Необычные по употреблению<input type="checkbox" id="set_eight6"></label>
+      <label for="set_eight7">Овощные<input type="checkbox" id="set_eight7"></label>
+      <label for="set_eight8">Огненные<input type="checkbox" id="set_eight8"></label>
+      <label for="set_eight9">Освежающие<input type="checkbox" id="set_eight9"></label>
+
+      <div class="range">
+        <div class="arrow_left"></div><input type="range" min="0" max="100" step="1" value="50">
+        <div class="arrow_right"></div>
+      </div>
+      <div class="show_list"><a href="#">Показать списком</a></div>
+
+    </fieldset>
+
+
+
+    <div class="chapter three">БОКАЛЫ</div>
+    <fieldset class="set_nine">
+      <label for="set_nine1">Бокал для белого вина<input type="radio" id="set_nine1"></label>
+      <label for="set_nine2">Бокал для красного вина<input type="radio" id="set_nine2"></label>
+      <label for="set_nine3">Бокал для слоистых коктейлей<input type="radio" id="set_nine3"></label>
+      <label for="set_nine4">Бокал сауэр<input type="radio" checked id="set_nine4"></label>
+      <label for="set_nine5">Бокал харикейн<input type="radio" id="set_nine5"></label>
+      <label for="set_nine6">Граненый стакан<input type="radio" id="set_nine6"></label>
+
+      <div class="range">
+        <div class="arrow_left"></div><input type="range" min="0" max="100" step="1" value="50">
+        <div class="arrow_right"></div>
+      </div>
+      <div class="show_list"><a href="#">Показать списком</a></div>
+
+    </fieldset>
+
+    <div class="chapter four">УКРАШЕНИЯ</div>
+    <fieldset class="set_ten">
+      <label for="set_ten1">Апельсин на бокале <input type="checkbox" id="set_ten1"></label>
+      <label for="set_ten2">Веточка мяты<input type="checkbox" id="set_ten2"></label>
+      <label for="set_ten3">Взбитые сливки с вишней<input type="checkbox" id="set_ten3"></label>
+      <label for="set_ten4">Виноград на шпажке<input type="checkbox" id="set_ten4"></label>
+      <label for="set_ten5">Вишенка на шпажке<input type="checkbox" id="set_ten5"></label>
+      <label for="set_ten6">Долька мандарина<input type="checkbox" checked id="set_ten6"></label>
+
+      <div class="range">
+        <div class="arrow_left"></div>
+        <input type="range" min="0" max="100" step="1" value="50">
+        <div class="arrow_right"></div>
+      </div>
+      <div class="show_list">
+        <a href="#">Показать списком</a>
+      </div>
+
+    </fieldset>
+
+
+    <div class="last_buttons">
+      <button type="submit">Добавить</button>
+      <button type="reset">Начать заново</button>
+    </div>
+
+  </form>
+
+</body>
+
+</html>
