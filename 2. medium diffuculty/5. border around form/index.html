@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Граница вокруг формы</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    fieldset {
+      background: rgb(255, 255, 203);
+      max-width: 500px;
+    }
+
+    fieldset::before {
+      content: '';
+      background: url(./solution/checked.png) no-repeat 20px 20px/22%;
+      position: absolute;
+      opacity: 0.1;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+    }
+
+    form p {
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    input {
+      display: block;
+      margin: 10px 20px 15px 150px;
+    }
+
+    legend {
+      color: rgb(210, 136, 0);
+      font-weight: 700;
+    }
+
+    input::after {
+      content: attr(value);
+      font-family: serif;
+      font-size: 14px;
+      position: absolute;
+      left: 195px;
+      line-height: 0.9;
+    }
+
+    input[type=submit] {
+      background: rgb(166, 130, 62);
+      color: #fff;
+      border-color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Тема: формы HTML5 -->
+  <!-- Создайте форму на HTML5, показанную на рис. 1. -->
+  <!-- Форма должна одинаково отображаться в браузерах IE8+, Opera 11+, Chrome 8+, Firefox 6+. -->
+
+  <form action="#">
+    <fieldset>
+      <legend>Выбор варианта</legend>
+      <p>Какой раздел человеческой психологии изучает познавательные процессы человеческого сознания?</p>
+      <input type="radio" name="survey" value="Психоанализ">
+      <input type="radio" name="survey" value="Бихевиоризм">
+      <input type="radio" name="survey" value="Когнитивная психология">
+      <input type="radio" name="survey" value="Гуманистическая психология">
+      <input type="radio" name="survey" value="Гештальт-психология">
+      <input type="submit" value="Ответить">
+    </fieldset>
+  </form>
+
+
+</body>
+
+</html>
