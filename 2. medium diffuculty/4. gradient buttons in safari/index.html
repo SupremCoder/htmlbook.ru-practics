@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Градиентные кнопки в Safari</title>
+  <style>
+    * {
+      margin: 2px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 5px 20px;
+      border-radius: 6px;
+      border-color: gray;
+      border-width: 0.5px;
+      border-style: solid;
+    }
+
+    .simple {
+      background-image: -moz-linear-gradient(#00bbd6, #ebffff);
+      background-image: -webkit-linear-gradient(#00bbd6, #ebffff);
+    }
+
+    .convex {
+      background-image: -moz-linear-gradient(#4af264, #39ba4d, #4af264);
+      background-image: -webkit-linear-gradient(#4af264, #39ba4d, #4af264);
+    }
+
+    .other_convex {
+      color: #fff;
+      background: -moz-linear-gradient(#e0f0f4, #56d1ed, #00bee8, #00bbd6);
+      background: -webkit-linear-gradient(#e0f0f4, #56d1ed, #00bee8, #00bbd6)
+    }
+
+    .web2 {
+      color: #fff;
+      background: -moz-linear-gradient(#e0f0f4, #848484, #000);
+      background: -webkit-linear-gradient(#e0f0f4, #848484, #000);
+      border: 2px solid #666;
+    }
+
+    .pressed {
+      background: -moz-linear-gradient(rgb(237, 237, 237), rgb(211, 211, 211), rgb(161, 161, 161));
+      background: -webkit-linear-gradient(rgb(237, 237, 237), rgb(211, 211, 211), rgb(161, 161, 161));
+      border: 2px inset #e4e4e4;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Тема: скругленные уголки градиент -->
+  <!-- Напишите для браузеров Firefox, Safari и Chrome стиль, реализующий кнопки, представленные на рис. 1. Запрещено использовать любые изображения. Допустимо, что результат может немного различаться в браузерах. -->
+
+  <button class="btn simple">Простой градиент</button>
+  <button class="btn convex">Выпуклая кнопка</button>
+  <button class="btn other_convex">Другая выпуклая кнопка</button>
+  <button class="btn web2">Кнопка в стиле Веб 2.0</button>
+  <button class="btn pressed">Вдавленная кнопка</button>
+
+</body>
+
+</html>
