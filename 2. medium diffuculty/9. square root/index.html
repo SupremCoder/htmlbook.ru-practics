@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Квадратный корень</title>
+  <style>
+    body {
+      margin: 100px;
+    }
+
+    .root {
+      width: 35px;
+      /* height: 50px; */
+      border-top: 2px solid black;
+      border-left: 2px solid black;
+      padding-left: 5px;
+      transform: skew(-15deg, 0);
+      position: relative;
+    }
+
+    .root::before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      height: 20px;
+      top: 13px;
+      right: 0;
+      bottom: 0;
+      border-left: 2px solid #000;
+      transform: skew(30deg);
+    }
+
+    .root::after {
+      content: "";
+      border-top: 2px solid #000;
+      position: absolute;
+      left: -17px;
+      top: 15px;
+      width: 5px;
+      right: 0;
+      bottom: 0;
+      transform: skew(0, -30deg);
+    }
+
+    .numb {
+      font-size: 30px;
+      /* font-style: italic; */
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Тема: спецсимволы CSS -->
+  <!-- Сделайте уравнение как показано на рис. 1. Знак корня должен отображаться корректно, независимо от используемого числа. -->
+
+  <div class="root">
+    <div class="numb">81</div>
+  </div>
+
+
+</body>
+
+</html>
