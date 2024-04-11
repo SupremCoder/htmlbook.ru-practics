@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Индикатор прогресса</title>
+  <style>
+    .progress {
+      width: 100%;
+      height: 20px;
+      background: linear-gradient(#1b1b1b, #989898);
+      border-radius: 50px;
+      position: relative;
+      box-shadow: 0 0 0.5px 1px #000;
+    }
+
+    .progress::before {
+      content: "";
+      position: absolute;
+      background: linear-gradient(top, #5bc1fe, #018ef2 50%, #57befd);
+      background: #5bc1fe;
+      width: 20%;
+      height: inherit;
+      border-radius: 50px 0 0 50px;
+      box-shadow: 3px 0 3px rgba(0, 0, 0, 0.5);
+      border: 1px solid #008DF2;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Тема: CSS3 тень градиент границы -->
+  <!-- Сделайте индикатор прогресса, как показано на рис. 1. Ширина самого элемента 100%, высота 20px. Значение индикатора должно легко задаваться через ширину, как в процентах, так и пикселах. -->
+  <!-- Для наглядности увеличенный фрагмент индикатора показан на рис. 2. Обратите внимание на градиенты, рамки и небольшую тень справа. -->
+
+  <div class="progress"></div>
+
+</body>
+
+</html>
