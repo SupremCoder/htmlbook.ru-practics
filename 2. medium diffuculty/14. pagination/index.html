@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Нумерация страниц</title>
+  <style>
+    .item-list {
+      height: 35px;
+      margin-bottom: 20px;
+      border-bottom: 4px solid gray;
+      background: #e7e7e7;
+    }
+
+    .pager {
+      background: rgb(207, 207, 207);
+      list-style: none;
+    }
+
+    .pager-current {
+      background: rgb(205, 199, 199);
+      border-bottom: 4px solid #000;
+    }
+
+    .pager li {
+      padding: 8px 14px;
+      float: left;
+    }
+
+    .pager a {
+      color: brown;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Тема: CSS -->
+  <!-- Используя приведенный код HTML, оформите его с помощью стилей, как показано на рис. 1. -->
+  <!-- Код должен остаться исходным, менять его запрещено, за исключением секции <head>. -->
+
+  <div class="item-list">
+    <ul class="pager">
+      <li class="pager-current first"><span>1</span></li>
+      <li class="pager-item"><a href="/node?page=1" title="На страницу номер 2">2</a></li>
+      <li class="pager-item"><a href="/node?page=2" title="На страницу номер 3">3</a></li>
+      <li class="pager-item"><a href="/node?page=3" title="На страницу номер 4">4</a></li>
+      <li class="pager-next last"><a href="/node?page=1" title="На следующую страницу">›</a></li>
+    </ul>
+  </div>
+  <p>Содержание</p>
+
+</body>
+
+</html>
