@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Квадраты</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #000;
+      outline-offset: 2px;
+      outline: 4px solid gray;
+      position: relative;
+    }
+
+    .box::after {
+      content: "";
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      width: inherit;
+      height: inherit;
+      outline: inherit;
+      background-color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Тема: CSS границы -->
+  <!-- Для приведённого кода создайте стиль, с помощью которого можно получить результат, представленный на рис. 1. Страница должна корректно отображаться в браузерах IE8+, Firefox 5+, Opera 11+ и Chrome. -->
+
+  <div class="box"></div>
+
+
+</body>
+
+</html>
