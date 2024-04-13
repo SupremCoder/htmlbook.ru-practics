@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Таблица с зеброй</title>
+  <style>
+    .wrapper {
+      width: 300px;
+    }
+
+    table,
+    .lux tr {
+      text-align: center;
+      border: 1px solid brown;
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
+
+    .lux th {
+      padding: 5px;
+    }
+
+    .lux th {
+      background: brown;
+      height: 20px;
+      color: #fff;
+    }
+
+    .lux tr td:first-child {
+      text-align: left;
+    }
+
+    .lux tr:nth-child(odd) {
+      background: #fff8e1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Тема: таблицы CSS3 Строки таблицы -->
+  <!-- Измените стиль для таблицы, чтобы она получилась, как показано на рис. 1. Вносить изменения в код таблицы нельзя, всё оформление должно делаться только через стили. -->
+  <!-- Сам код таблицы приведён в примере 1. -->
+
+  <div class="wrapper">
+    <table class="lux">
+      <tr>
+        <th></th>
+        <th>2004</th>
+        <th>2005</th>
+        <th>2006</th>
+      </tr>
+      <tr>
+        <td>Рубины</td>
+        <td>43</td>
+        <td>51</td>
+        <td>79</td>
+      </tr>
+      <tr>
+        <td>Изумруды</td>
+        <td>28</td>
+        <td>34</td>
+        <td>48</td>
+      </tr>
+      <tr>
+        <td>Сапфиры</td>
+        <td>29</td>
+        <td>57</td>
+        <td>36</td>
+      </tr>
+      <tr>
+        <td>Аметисты</td>
+        <td>23</td>
+        <td>64</td>
+        <td>97</td>
+      </tr>
+    </table>
+  </div>
+
+
+</body>
+
+</html>
