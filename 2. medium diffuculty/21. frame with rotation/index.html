@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рамка с поворотом</title>
+  <style>
+    body {
+      margin: 100px;
+    }
+
+    div {
+      border: 2px solid brown;
+      width: 300px;
+      height: 200px;
+      transform: rotate(-6deg);
+    }
+
+    .frame {
+      background: rgb(186, 186, 186);
+    }
+
+    .frame div {
+      background: rgb(186, 186, 186);
+      transform: rotate(6deg);
+      background: url(./solution/back.jpg) 100%/cover no-repeat;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Тема: трансформация псевдоэлементы границы -->
+  <!-- Сделайте страницу, как показано на рис. 1. Рамка должна корректно отображаться во всех современных браузерах. -->
+
+  <div class="frame">
+    <div></div>
+  </div>
+
+</body>
+
+</html>
