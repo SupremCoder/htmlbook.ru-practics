@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Последняя линия справа</title>
+  <style>
+    .links {
+      background: #F6967D;
+    }
+
+    .links a {
+      color: #FFFDEB;
+      display: inline-block;
+      border-right: 1px solid #B62025;
+      padding: 5px 10px;
+    }
+
+    /* 1-way */
+    /* .links a:last-child {
+      border: none;
+    } */
+    /* 2-way */
+    /* .links a:nth-child(4) {
+      border: none;
+    } */
+    /* 3-way */
+    .links a[href='4.html'] {
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Тема: CSS CSS3 ссылки рамки и границы -->
+  <!-- Дан следующий код, который добавляет ссылки и устанавливает для них в стилях линию справа (пример 1). -->
+  <!-- Вид ссылок показан на рис. 1. -->
+  <!-- Придумайте три способа, как убрать последнюю линию справа от ссылки. При этом допускается только редактировать стили без изменения HTML-кода внутри <body>. -->
+
+  <div class="links">
+    <a href="1.html">uno</a>
+    <a href="2.html">dos</a>
+    <a href="3.html">tres</a>
+    <a href="4.html">cuatro</a>
+  </div>
+
+</body>
+
+</html>
