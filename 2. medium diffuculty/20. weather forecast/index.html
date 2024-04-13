@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Прогноз погоды</title>
+  <style>
+    .weather_ui {
+      max-width: 500px;
+    }
+
+    .cards {
+      display: flex;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+      height: 220px;
+      margin-right: 2px;
+    }
+
+    .card_head {
+      font-size: 20px;
+      padding: 2px;
+      text-align: center;
+      color: #fff;
+      background: rgb(33, 162, 213);
+    }
+
+    .card_image {
+      height: 200px;
+      margin-top: 10px;
+    }
+
+    .card_content {
+      font-size: 30px;
+      margin-top: auto;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .cloudy {
+      background: url(./solution/weather.png) right 0/310px;
+    }
+
+    .snowy {
+      background: url(./solution/weather.png) 15px bottom/310px;
+    }
+
+    .breeze {
+      background: url(./solution/weather.png) right bottom/310px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Тема: CSS3 тень -->
+  <!-- Сверстайте показанный на рис. 1 макет. Ширина колонок фиксирована и не зависит от размеров окна браузера. -->
+  <!-- При наведении на любую колонку вокруг неё отображается тень (рис. 2). -->
+
+  <div class="weather_ui">
+    <div class="cards">
+      <div class="card">
+        <div class="card_head">31.08</div>
+        <div class="card_image cloudy"></div>
+        <div class="card_content">+20</div>
+      </div>
+      <div class="card">
+        <div class="card_head">01.09</div>
+        <div class="card_image snowy"></div>
+        <div class="card_content">-3</div>
+      </div>
+      <div class="card">
+        <div class="card_head">02.09</div>
+        <div class="card_image breeze"></div>
+        <div class="card_content">
+          <div>-10</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
