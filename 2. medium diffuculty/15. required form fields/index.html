@@ -6,20 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Обязательные поля формы</title>
   <style>
-    input:valid+span:after {
-      content: url(./checked.png);
-      padding-left: 5px;
-      vertical-align: middle;
+    label+input {
+      margin-bottom: 15px;
     }
 
-    input:invalid+span:after {
-      content: url(./error.png);
-      padding-left: 5px;
-      vertical-align: middle;
+    input:valid+span::after {
+      content: '';
+      padding-left: 25px;
+      background: url(./solution/verified.png) center center/20px 20px no-repeat;
     }
 
-    input[type="number"] {
-      margin-right: -3px;
+    input:invalid+span::after {
+      content: '';
+      padding-left: 25px;
+      background: url(./solution/not.png) center center/20px 20px no-repeat;
     }
   </style>
 </head>
@@ -30,14 +30,19 @@
   <!-- Сделайте форму, показанную на рис. 1, в которой поля обязательные к заполнению отмечены крестиком, а необязательные поля зеленой галочкой. При корректном заполнении обязательных полей должен меняться и рисунок возле поля. -->
   <!-- Пример должен корректно работать в браузерах Firefox 6+, Safari 5, Chrome 8+ и Opera 11+. -->
 
-  <form action="handler.php">
+  <form action="submit.php">
     <p>Пожалуйста, заполните обязательные поля.</p>
-    <p>Имя: <input type="text" required><span></span></p>
-    <p>Возраст: <input type="number" size="3"><span></span></p>
-    <p>E-mail: <input type="email" required><span></span></p>
-    <p>Сайт: <input type="url"><span></span></p>
-    <p><input type="submit" value="Отправить"></p>
+    <label for="name">Имя: </label>
+    <input type="text" id="name" required><span></span><br />
+    <label for="age">Возрасть:</label>
+    <input type="number" id="age"><span></span><br />
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" required><span></span><br />
+    <label for="website">Сайт:</label>
+    <input type="url" id="website"><span></span><br />
+    <input type="submit" value="Отправить">
   </form>
+
 
 </body>
 
