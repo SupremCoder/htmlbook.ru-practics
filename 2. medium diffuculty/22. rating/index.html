@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рейтинг</title>
+  <style>
+    .rating {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+      border-radius: 10px;
+      background: #878787;
+      position: relative;
+      color: #fff;
+    }
+
+    span {
+      z-index: 1;
+    }
+
+    .rating::after {
+      content: '';
+      border-radius: 10px 0 0 10px;
+      background: rgb(123, 177, 98);
+      width: 20%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .btns span {
+      padding: 010px;
+    }
+
+    button {
+      border: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 5px;
+      color: #fff;
+      box-shadow: 0 0 2px #000;
+      cursor: pointer;
+    }
+
+    .subtract {
+      background: rgb(180, 61, 61);
+      border: none;
+    }
+
+    .add {
+      background: rgb(123, 177, 98);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Тема: CSS3 скругленные уголки -->
+  <!-- Сделайте страницу, показанную на рис. 1. Блок тянется вместе с шириной окна браузера, ширина левой части с числом и положение кнопок справа не меняется. -->
+
+  <div class="rating">
+    <span>9691</span>
+    <div class="btns">
+      <button class="subtract">-</button>
+      <span>6</span>
+      <button class="add">+</button>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
