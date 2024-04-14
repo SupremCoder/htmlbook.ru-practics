@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .battery {
+      margin: 20px;
+      background: gray;
+      padding: 15px;
+      width: 320px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      /* transform: skew(-30deg); */
+    }
+
+    .battery::before {
+      content: "";
+      position: absolute;
+      left: -8px;
+      top: -15px;
+      width: 20px;
+      height: 45px;
+      transform: rotate(27deg);
+      background: #fff;
+    }
+
+    .battery::after {
+      content: "";
+      position: absolute;
+      left: -8px;
+      top: -15px;
+      width: 20px;
+      height: 45px;
+      transform: rotate(27deg);
+      background: #fff;
+    }
+
+    .batteries {
+      display: flex;
+      justify-content: space-around;
+      gap: 10px;
+    }
+
+    .batteries div {
+      padding: 10px;
+      transform: skew(-30deg);
+      background: #fff;
+    }
+
+    div.blue {
+      background: blue;
+    }
+
+    div.yellow {
+      background: yellow;
+    }
+
+    div.orange {
+      background: orange;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Тема: CSS3 -->
+  <!-- Создайте страницу, показанную на рисунке ниже, без использования изображений. Страница должна корректно отображаться в последних версиях основных браузеров. -->
+
+  <p>Тактико-технические характеристики вооружения ЫЩ-35У (образца 2035 года)</p>
+
+  <div class="battery">
+    <span>Уровень зарядки</span>
+    <div class="batteries">
+      <div class="blue"></div>
+      <div class="blue"></div>
+      <div class="yellow"></div>
+      <div class="yellow"></div>
+      <div class="orange"></div>
+      <div class="orange"></div>
+    </div>
+  </div>
+  <div class="battery">
+    <span>Убойная сила</span>
+    <div class="batteries">
+      <div class="blue"></div>
+      <div class="blue"></div>
+      <div class="yellow"></div>
+      <div class=""></div>
+      <div class=""></div>
+      <div class=""></div>
+    </div>
+  </div>
+  <div class="battery">
+    <span>Перезарядка</span>
+    <div class="batteries">
+      <div class="blue"></div>
+      <div class=""></div>
+      <div class=""></div>
+      <div class=""></div>
+      <div class=""></div>
+      <div class=""></div>
+    </div>
+  </div>
+
+</body>
+
+</html>
