@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Текст для галочки</title>
+  <style>
+    label,
+    input {
+      margin-bottom: 10px;
+      margin-right: 5px;
+    }
+
+    label {
+      padding: 3px;
+    }
+
+    input[type="checkbox"]:checked+label {
+      background: #fc0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Тема: CSS3 HTML5 формы -->
+  <!-- Создайте страницу, показанную на рис. 1. Текст возле отмеченных галочек должен выделяться фоновым цветом. Код должен корректно работать в последних версиях браузеров Internet Explorer, Firefox, Opera, Safari, Chrome. -->
+
+  <form action="">
+    <input type="checkbox" name="" id="Балка"><label for="Балка">Балка рукояти</label><br />
+    <input type="checkbox" name="" id="Шестерня"><label for="Шестерня">Шестерня</label><br />
+    <input type="checkbox" name="" id="Вал"><label for="Вал">Вал</label><br />
+    <input type="checkbox" name="" id="Пимпочка"><label for="Пимпочка">Пимпочка</label><br />
+    <input type="submit" value="Отправить">
+  </form>
+
+</body>
+
+</html>
