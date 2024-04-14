@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Цитата</title>
+  <style>
+    blockquote {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 20px;
+      position: relative;
+    }
+
+    blockquote::before,
+    blockquote::after {
+      font-size: 50px;
+
+    }
+
+    blockquote::before {
+      content: '«';
+      color: brown;
+      position: absolute;
+      left: -40px;
+      top: -22px;
+    }
+
+    blockquote::after {
+      content: '»';
+      color: brown;
+      position: absolute;
+      right: 2px;
+      bottom: -20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Тема: CSS спецсимволы кавычки спецсимволы -->
+  <!-- С помощью стилей оформите страницу, как показано на рис. 1. Размер и положение кавычек можно установить по своему желанию. -->
+
+  <div class="quote">
+    <blockquote>
+      Не ошибается лишь тот, кто ничего не делает!
+      Не бойтесь ошибаться&nbsp;— бойтесь повторять ошибки.
+      <p>Теодер Рузвельт</p>
+    </blockquote>
+  </div>
+
+</body>
+
+</html>
