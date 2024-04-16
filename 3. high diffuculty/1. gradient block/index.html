@@ -6,58 +6,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Блок с градиентом</title>
   <style>
-    .wrapper {
-      margin: 40px;
-      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    }
-
     body {
-      background: -webkit-linear-gradient(left, rgba(183, 189, 93, 1) 0%, rgba(138, 78, 205, 1) 100%);
-      background: -o-linear-gradient(left, rgba(183, 189, 93, 1) 0%, rgba(138, 78, 205, 1) 100%);
-      background: linear-gradient(to right, rgba(183, 189, 93, 1) 0%, rgba(138, 78, 205, 1) 100%);
+      background: linear-gradient(to right, rgb(212, 53, 0), rgb(146, 230, 43));
     }
 
-    .outside {
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flex;
-      display: -o-flex;
-      box-sizing: border-box;
-      min-width: 200px;
+    .block,
+    .block::before {
+      border-radius: 6px;
+    }
+
+    .block {
+      margin: 20px;
       min-height: 100px;
-      padding: 10px;
-      background: rgba(0, 76, 59, 0.5);
-      border-radius: 5px;
-      border: 2px solid #004C3B;
-    }
-
-    .inside {
-      width: 100%;
-      background: #EDECDE;
-      border-radius: 5px;
-      border: 1px solid #666666;
-    }
-
-    .inside__title {
+      background: #efefef;
       position: relative;
-      padding: 8px 10px;
-      background: linear-gradient(to bottom, #FFD800, #FFBA00);
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
     }
 
-    .inside__title:after {
+    .block::before {
+      border: 2px solid rgb(0, 0, 0);
+      content: "";
+      margin: -10px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      top: 0;
+      background: rgb(0, 165, 66, 0.6);
+      position: absolute;
+      z-index: -1;
+    }
+
+    .block div {
+      padding: 10px;
+    }
+
+    .block div:first-child {
+      background: rgb(255, 191, 30);
+      border-radius: 6px 6px 0 0;
+      position: relative;
+    }
+
+    .block div:first-child::after {
+      content: '';
       position: absolute;
       left: 6px;
-      bottom: -16px;
+      bottom: -17px;
       border: 8px solid transparent;
-      border-top: 10px solid #FFBA00;
-      content: "";
-    }
-
-    .inside__text {
-      font-size: 0.7em;
-      padding: 10px;
+      border-top: 10px solid rgb(255, 191, 30);
     }
   </style>
 </head>
@@ -76,13 +70,9 @@
   Допустимы незначительные отклонения от макета при отображении в разных браузерах.
   Блок «резиновый», т.е. тянется по ширине окна браузера. -->
 
-  <div class="wrapper">
-    <div class="outside">
-      <div class="inside">
-        <div class="inside__title">Заголовок</div>
-        <div class="inside__text">Содержимое</div>
-      </div>
-    </div>
+  <div class="block">
+    <div>Заголовок</div>
+    <div>Содержимое</div>
   </div>
 
 </body>
