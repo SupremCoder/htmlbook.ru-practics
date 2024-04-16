@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Блок с тенью</title>
+  <style>
+    .block_shadow {
+      position: relative;
+      margin: 20px;
+      border-radius: 50%;
+    }
+
+    .content,
+    .head {
+      background: rgb(184, 221, 130);
+      padding: 10px 10px 15px 10px;
+      font-family: Arial, Helvetica, sans-serif;
+      /* border-radius: 10px; */
+    }
+
+    .head {
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 10px;
+      /* width: 80px; */
+      display: inline-block;
+      border-radius: 10px 10px 0 0;
+      box-shadow:
+        0 -1px 2px 0 rgb(170, 170, 170),
+        -7px 1.6px 4px -5px rgb(170, 170, 170),
+        7px 0.5px 4px -5px rgb(170, 170, 170);
+    }
+
+
+    .content {
+      margin-top: -13px;
+      border-top: none;
+      height: 150px;
+      width: 100%;
+      border-radius: 0 10px 10px 10px;
+      padding: 10px;
+      box-shadow: 0 0 3px 2px rgb(170, 170, 170);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Тема: CSS3 скругленные уголки тень блоки -->
+  <!-- Сделайте блок, показанный на рис. 1. Блок содержит скругления в заголовке и внизу блока. Вокруг блока тёмно-зелёная рамка и тень. Длина заголовка может меняться, соответственно, должна изменяться и ширина блока под ним, но при этом не превышать 250px. -->
+  <!-- Необходимо соблюсти следующие условия.
+  Валидная вёрстка на HTML5.
+  Валидность CSS не важна.
+  Таблицы и их имитация через стили не применяются.
+  Уголки имеют фиксированный размер, ширина и высота уголков одинакова, задаётся в пикселах.
+  Корректное отображение в браузерах IE9+, Opera 12+, Firefox 6+, Safari 5.1, Chrome 12+.
+  Допустимы незначительные отклонения от макета при отображении в разных браузерах.
+  Блок «резиновый», т.е. тянется по ширине окна браузера. -->
+
+  <div class="block_shadow">
+    <div class="head">Заголовок</div>
+    <div class="content">Содержание блока</div>
+  </div>
+
+
+</body>
+
+</html>
