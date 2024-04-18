@@ -6,37 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Блок с указателем</title>
   <style>
-    body {
-      background: #333333;
-    }
-
-    .wrapper {
-      margin: 40px;
-      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-      font-size: 30px;
-    }
-
     .pointer {
-      position: relative;
-      margin-top: 10%;
-      padding: 40px 80px;
-      color: #FFFFFF;
+      margin: 100px;
+      padding: 20px;
+      background: rgb(133, 213, 243);
       text-align: center;
-      background: #88B7D5;
-      border: 4px solid #C2E1F5;
+      color: #fff;
+      border: 5px solid rgb(209, 243, 255);
+      position: relative;
     }
 
-    .pointer:after {
+    .pointer::before {
+      content: '';
       position: absolute;
-      left: 50%;
-      top: -38.9px;
-      width: 70px;
-      height: 70px;
-      clip-path: polygon(0 0, 0% 100%, 100% 0);
-      transform: rotate(45deg);
-      background: #88B7D5;
-      border: 4px solid #C2E1F5;
-      content: "";
+      left: 40%;
+      bottom: 60px;
+      border: 45px solid transparent;
+      border-bottom: 45px solid rgb(209, 243, 255);
+    }
+
+    .pointer::after {
+      content: '';
+      position: absolute;
+      left: 42%;
+      bottom: 60px;
+      border: 35px solid transparent;
+      border-bottom: 38px solid rgb(133, 213, 243);
     }
   </style>
 </head>
@@ -48,11 +43,12 @@
   Указатель всегда располагается посередине блока, размеры указателя фиксированы. -->
 
   <body>
-    <div class="wrapper">
-      <div class="pointer">Дистанции огромного размера</div>
+
+    <div class="pointer">
+      Дистанции огромного размера
     </div>
+
   </body>
 
 </body>
-
 </html>
