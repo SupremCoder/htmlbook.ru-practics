@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ниспадающее меню</title>
+  <style>
+    ul {
+      list-style: none;
+    }
+
+    a {
+      color: #000;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown>ul {
+      margin-bottom: 10px;
+    }
+
+    .dropdown>ul>a {
+      color: #000;
+    }
+
+    .dropdown>ul>li {
+      display: inline-block;
+      margin-right: 20px;
+      padding: 2px 5px;
+      border-radius: 2px;
+    }
+
+    .dropdown>ul>li:hover {
+      border-radius: 2px;
+      box-shadow: 0px -2px 3px 1px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: 0px -2px 3px 1px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0px -2px 3px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    .dropdown>ul>li:hover .menu {
+      display: block;
+      padding: 0;
+      box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.29);
+      -webkit-box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.29);
+      -moz-box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.29);
+    }
+
+    .dropdown>ul>li:hover .menu>li>a:hover {
+      background: #2f00ff;
+      color: #fff;
+    }
+
+    .dropdown>ul>li:hover .menu>li {
+      padding: 2px;
+    }
+
+    .menu {
+      display: none;
+      position: absolute;
+      /* margin-top: -1px; */
+      margin-left: -5px;
+    }
+
+    .menu li a {
+      padding-right: 20px;
+      color: blue;
+      /* width: 100%; */
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Тема: CSS3 тень Псевдоклассы -->
+  <!-- Сделайте ниспадающее меню, показанное на рисунках. -->
+  <!-- Меню должно корректно отображаться в основных современных браузерах. -->
+
+  <div class="dropdown">
+    <ul>
+      <li><a href="#">Файл</a>
+        <ul class="menu">
+          <li><a href="#">Новый</a></li>
+          <li><a href="#">Открыть</a></li>
+          <li><a href="#">Сохранить</a></li>
+          <li><a href="#">Закрыть</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Правка</a>
+        <ul class="menu">
+          <li><a href="#">Новый</a></li>
+          <li><a href="#">Открыть</a></li>
+          <li><a href="#">Сохранить</a></li>
+          <li><a href="#">Закрыть</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+</body>
+
+</html>
